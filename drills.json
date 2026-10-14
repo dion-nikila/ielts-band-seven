@@ -1,0 +1,506 @@
+[
+  {
+    "id": "reading-urban-trees",
+    "title": "Reading: the value of a mature tree",
+    "skill": "Reading",
+    "minutes": 14,
+    "description": "Original IELTS-inspired learning drill, not an official IELTS test. The town, study and figures are fictional. Read for evidence, answer all 8 questions, then review why each answer follows. Your raw result measures this drill only.",
+    "passage": "In the fictional town of Bellhaven, a research team examined whether counting newly planted trees was a useful way to judge a street-greening programme. For three summers, the team monitored twelve residential streets. Half contained rows of mature trees, while the other half had recently received young trees. The streets were selected to have similar building heights and road widths. Researchers were interested in shade and pedestrian comfort, rather than in the appearance of the planting schemes.\n\nThe council's public dashboard had previously displayed only the number of trees planted each year. This made a year with extensive planting look successful, even when many mature trees had been removed. The team therefore proposed an additional measure: the proportion of the pavement covered by tree shade at midday. Unlike a simple tree count, this measure captured an immediate benefit available to people walking along a street. It did not, however, describe every service a tree might provide.\n\nOn clear days, researchers measured pavement surface temperature at fixed points between noon and two o'clock. They also asked pedestrians to rate how comfortable they felt. Shaded pavement beneath mature trees was, on average, cooler than exposed pavement. These were measurements of the pavement, not of the air. The team warned that the temperature difference should not be described as a reduction in the temperature of the whole neighbourhood. Pedestrians on the more shaded streets generally reported greater comfort, although personal preferences varied.\n\nThe young trees cast little shade during the study. This did not mean that planting them had failed: their expected benefits lay partly in the future. The researchers argued that protecting existing mature trees and establishing new trees were complementary tasks. Replacing a large tree with several small ones could maintain or increase the tree count while reducing the shade available for many years. A healthy-looking total could therefore conceal a temporary loss of useful canopy.\n\nThere were limits to the findings. All twelve streets were residential, so the researchers did not claim that the results applied equally to industrial districts. Measurements were taken in summer; winter comfort was outside the project's scope. The final report recommended recording both new planting and the survival of existing trees. It also called for repeated shade measurements, because a single photograph could be misleading if taken at a different time of day. The council adopted the additional shade measure for its next annual report, while retaining the planting count.",
+    "questions": [
+      {
+        "id": "trees-1",
+        "type": "tfng",
+        "question": "Before the study, the council dashboard reported the number of trees planted each year.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "True",
+        "explanation": "Paragraph 2 says the dashboard had displayed only the number of trees planted each year.",
+        "tag": "locating detail"
+      },
+      {
+        "id": "trees-2",
+        "type": "tfng",
+        "question": "The temperature instruments measured the air beneath the trees.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "explanation": "Paragraph 3 explicitly says the measurements were of the pavement, not the air. This directly contradicts the statement.",
+        "tag": "precise nouns"
+      },
+      {
+        "id": "trees-3",
+        "type": "tfng",
+        "question": "The researchers were paid more than the council staff who maintained the trees.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "explanation": "The passage gives no information about either group's pay. A comparison of salaries cannot be established.",
+        "tag": "not given"
+      },
+      {
+        "id": "trees-4",
+        "type": "tfng",
+        "question": "The researchers regarded protecting mature trees and planting new trees as complementary activities.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "True",
+        "explanation": "Paragraph 4 calls the two activities complementary tasks: both have a role.",
+        "tag": "paraphrase"
+      },
+      {
+        "id": "trees-5",
+        "type": "mcq",
+        "question": "Why did the team recommend measuring midday pavement shade?",
+        "options": [
+          "It represented an immediate benefit that a planting count could miss.",
+          "It proved that every tree species provided equal benefits.",
+          "It removed the need to record any new planting.",
+          "It measured pedestrian comfort throughout the winter."
+        ],
+        "answer": "It represented an immediate benefit that a planting count could miss.",
+        "explanation": "Paragraph 2 links the shade measure to an immediate benefit for walkers. The final paragraph says the planting count was retained.",
+        "tag": "purpose"
+      },
+      {
+        "id": "trees-6",
+        "type": "mcq",
+        "question": "Which finding would be consistent with the explanation in paragraph 4?",
+        "options": [
+          "Several small replacement trees always produce more shade than one large tree.",
+          "A rising tree count can accompany a reduction in available shade.",
+          "Young trees cannot benefit a town in the future.",
+          "The number of trees and the amount of shade must change at the same rate."
+        ],
+        "answer": "A rising tree count can accompany a reduction in available shade.",
+        "explanation": "Replacing one large tree with several small ones can increase the count while reducing shade for years.",
+        "tag": "logical relationship"
+      },
+      {
+        "id": "trees-7",
+        "type": "mcq",
+        "question": "Which limitation did the report identify?",
+        "options": [
+          "The study covered residential streets rather than all types of district.",
+          "The team measured only newly planted trees.",
+          "No pedestrians were asked about their comfort.",
+          "Building heights differed deliberately between the two groups."
+        ],
+        "answer": "The study covered residential streets rather than all types of district.",
+        "explanation": "Paragraph 5 states that all twelve streets were residential and the findings were not claimed to apply equally to industrial districts.",
+        "tag": "scope"
+      },
+      {
+        "id": "trees-8",
+        "type": "mcq",
+        "question": "Why might one photograph give a misleading impression of shade?",
+        "options": [
+          "Its camera could change the age of the trees.",
+          "Photographs cannot show pavement.",
+          "Shade can differ with the time of day.",
+          "The dashboard no longer included any numbers."
+        ],
+        "answer": "Shade can differ with the time of day.",
+        "explanation": "The final paragraph recommends repeated shade measurements because a photograph taken at a different time of day could mislead.",
+        "tag": "cause and effect"
+      }
+    ]
+  },
+  {
+    "id": "reading-remote-work",
+    "title": "Reading: what a hybrid-work trial can tell us",
+    "skill": "Reading",
+    "minutes": 14,
+    "description": "Original IELTS-inspired learning drill, not an official IELTS test. The organisation, study and figures are fictional. Distinguish evidence from assumptions, then inspect every explanation. Your raw result measures this drill only.",
+    "passage": "This original learning passage describes a fictional trial at Northbridge Services, a company that processes applications for other organisations. The company wanted to learn whether a hybrid schedule could improve staff retention without reducing the quality of its work. During a six-month trial, eighty employees could work at home on two days each week. Another eighty continued to work in the office every day. Both groups used the same application-processing software and followed the same quality rules.\n\nParticipation was voluntary. Employees who wanted a hybrid schedule applied for the trial, and managers selected a group whose duties could be performed remotely. The office group consisted of staff doing similar work who had chosen not to apply. Because workers were not assigned randomly, the research team cautioned against treating differences between the groups as proof that the schedule alone had caused them. For example, the volunteers might have differed in motivation before the trial began.\n\nThe team recorded how many applications each employee completed and what proportion needed correction. It did not use time logged into the computer as a measure of productivity. By the end of the trial, average output per employee had changed little in either group, and correction rates were also similar. These results addressed the quantity and accuracy of routine processing; they did not measure creativity or the development of new services. The researchers said those outcomes would require different tasks and methods.\n\nStaff surveys provided a more mixed picture. Hybrid workers reported less time spent commuting and greater satisfaction with their schedules. In the second month, their ratings of communication with colleagues had fallen below their own pre-trial level and were also lower than the office group's ratings. Managers then introduced a shared daily period when everyone had to be available for questions, regardless of location. In the final month, the hybrid group's communication rating had returned to its own pre-trial level. The report did not separate the effect of this change from the effect of employees becoming more familiar with the arrangement.\n\nFewer hybrid workers left the company during the trial, but the number of departures was small. The team recommended continuing to monitor retention rather than projecting a precise annual saving. It also recommended checking whether new employees received enough informal help. Experienced staff had made up most of the trial group, and their ability to work independently might not represent that of a recent recruit. The company extended the hybrid option while commissioning a separate review of training for newcomers.",
+    "questions": [
+      {
+        "id": "remote-1",
+        "type": "tfng",
+        "question": "Employees were allocated to the hybrid and office groups at random.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "explanation": "Paragraph 2 explicitly says workers were not assigned randomly; hybrid participation began with volunteers.",
+        "tag": "study design"
+      },
+      {
+        "id": "remote-2",
+        "type": "tfng",
+        "question": "The productivity measures included both completed applications and the proportion requiring correction.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "True",
+        "explanation": "Paragraph 3 names the number completed and the proportion needing correction as the recorded measures.",
+        "tag": "locating detail"
+      },
+      {
+        "id": "remote-3",
+        "type": "tfng",
+        "question": "Most hybrid workers had a separate room at home that they used as an office.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "explanation": "The passage does not describe the employees' homes or say how many had a separate room.",
+        "tag": "not given"
+      },
+      {
+        "id": "remote-4",
+        "type": "tfng",
+        "question": "In the final month, hybrid workers rated communication more highly than they had before the trial.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "explanation": "Paragraph 4 says the rating returned to its own pre-trial level. It does not say it rose above that level.",
+        "tag": "comparison"
+      },
+      {
+        "id": "remote-5",
+        "type": "mcq",
+        "question": "Why should the observed differences not be attributed confidently to the schedule alone?",
+        "options": [
+          "The software was different in the two groups.",
+          "The volunteers may already have differed from the office group.",
+          "The trial never collected any output data.",
+          "The office group was required to work at home."
+        ],
+        "answer": "The volunteers may already have differed from the office group.",
+        "explanation": "Paragraph 2 explains that voluntary selection creates possible pre-existing differences, such as motivation.",
+        "tag": "causal caution"
+      },
+      {
+        "id": "remote-6",
+        "type": "mcq",
+        "question": "What did the output and correction-rate findings mainly concern?",
+        "options": [
+          "The invention of new services.",
+          "Time spent signed into computers.",
+          "The quantity and accuracy of routine processing.",
+          "The long-term quality of staff training."
+        ],
+        "answer": "The quantity and accuracy of routine processing.",
+        "explanation": "Paragraph 3 expressly limits those results to routine processing and excludes creativity and new-service development.",
+        "tag": "scope"
+      },
+      {
+        "id": "remote-7",
+        "type": "mcq",
+        "question": "What can be concluded about the daily shared availability period?",
+        "options": [
+          "The report proved it was the sole reason communication improved.",
+          "It was introduced after communication ratings fell, but its separate effect was not established.",
+          "Only office staff were required to be available.",
+          "It caused every employee to leave the hybrid group."
+        ],
+        "answer": "It was introduced after communication ratings fell, but its separate effect was not established.",
+        "explanation": "Paragraph 4 gives the sequence and says the report could not separate the change's effect from increasing familiarity.",
+        "tag": "qualified conclusion"
+      },
+      {
+        "id": "remote-8",
+        "type": "mcq",
+        "question": "Why did the researchers recommend checking the experience of new employees?",
+        "options": [
+          "Most trial participants were experienced and could work independently.",
+          "All new employees had resigned during the trial.",
+          "New employees had been the only group allowed to work remotely.",
+          "The company planned to stop all staff training."
+        ],
+        "answer": "Most trial participants were experienced and could work independently.",
+        "explanation": "The final paragraph says experienced staff made up most of the trial group, so newcomers might need a different amount of informal help.",
+        "tag": "reason"
+      }
+    ]
+  },
+  {
+    "id": "reading-citizen-science",
+    "title": "Reading: making volunteer observations useful",
+    "skill": "Reading",
+    "minutes": 14,
+    "description": "Original IELTS-inspired learning drill, not an official IELTS test. The project, researchers and results are fictional. Practise qualifiers, comparisons and Not Given. Your raw result measures this drill only.",
+    "passage": "The Riverwatch project in this original learning passage is fictional. It asked volunteers to photograph insects beside a river and upload their observations through a mobile application. Professional ecologists hoped the records would help them identify places that deserved more detailed surveys. The project was designed to widen geographical coverage, rather than to replace every visit by a specialist. Volunteers could contribute on any day, but each photograph had to include a location and a date.\n\nDuring the project's first season, the number of submissions rose rapidly. That growth created a problem: many photographs showed common insects, while unusual species were harder to identify. A high submission total therefore did not necessarily mean that the project had collected equally useful information about every species. Some river sections also attracted many more visitors than others. If one section generated few records, the team could not immediately conclude that it contained fewer insects; it might simply have had fewer observers.\n\nBefore the second season, the team changed its instructions. A short online lesson showed contributors how to photograph distinguishing features and explained why a clear picture of an ordinary insect could still be useful. Volunteers were also invited to survey marked sections for twenty minutes and to record a visit even when they saw no target insects. These records of visits without sightings helped the team distinguish a lack of observations from a lack of effort. The project continued to accept casual submissions, but it stored them separately from the timed surveys.\n\nSpecialists checked a sample of records from each season, rather than every submitted record. In the second season, the proportion of sampled photographs that allowed a confident identification was higher. However, the researchers did not know whether the lesson alone explained the improvement. Some volunteers had returned from the first season and might have improved through experience. The check also revealed that a small number of contributors produced a large share of usable records. The team resisted assuming that a typical volunteer would submit the same amount of material.\n\nThe final report recommended a combination of broad participation and targeted follow-up. Volunteer records could highlight a possible change, after which ecologists could revisit the location using a consistent survey method. The authors warned that an absence of photographs was not sufficient evidence that a species had disappeared. They also suggested publishing an accessible account of how records were used. In their view, showing volunteers the purpose of careful observations was more helpful than celebrating a rising upload count alone.",
+    "questions": [
+      {
+        "id": "citizen-1",
+        "type": "tfng",
+        "question": "Every uploaded photograph was required to have a date and location.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "True",
+        "explanation": "Paragraph 1 says each photograph had to include a location and a date.",
+        "tag": "locating detail"
+      },
+      {
+        "id": "citizen-2",
+        "type": "tfng",
+        "question": "After the instructions changed, Riverwatch stopped accepting casual submissions.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "explanation": "Paragraph 3 says it continued to accept casual submissions, storing them separately from timed surveys.",
+        "tag": "negative detail"
+      },
+      {
+        "id": "citizen-3",
+        "type": "tfng",
+        "question": "The online lesson was translated into five languages.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "explanation": "The passage describes the lesson's content but provides no information about its languages or translations.",
+        "tag": "not given"
+      },
+      {
+        "id": "citizen-4",
+        "type": "tfng",
+        "question": "In the second season, specialists checked every photograph submitted to Riverwatch.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "explanation": "Paragraph 4 explicitly says specialists checked a sample from each season rather than every submitted record. This contradicts the claim that they checked every photograph.",
+        "tag": "quantifiers"
+      },
+      {
+        "id": "citizen-5",
+        "type": "mcq",
+        "question": "Why could a river section with few insect records be difficult to interpret?",
+        "options": [
+          "Photographs from that section were always deleted.",
+          "Few records could reflect a low number of observers rather than a low number of insects.",
+          "The project had proved that insects avoided all visitors.",
+          "Every river section received exactly the same survey effort."
+        ],
+        "answer": "Few records could reflect a low number of observers rather than a low number of insects.",
+        "explanation": "Paragraph 2 explicitly gives observer numbers as an alternative explanation for a low record count.",
+        "tag": "alternative explanation"
+      },
+      {
+        "id": "citizen-6",
+        "type": "mcq",
+        "question": "What was the main value of recording timed visits with no target-insect sightings?",
+        "options": [
+          "It guaranteed that no insects lived at the location.",
+          "It removed the need to record the visit length.",
+          "It helped separate absence of sightings from absence of observation effort.",
+          "It ensured that all casual uploads could be discarded."
+        ],
+        "answer": "It helped separate absence of sightings from absence of observation effort.",
+        "explanation": "Paragraph 3 explains that visits without sightings helped distinguish a lack of observations from a lack of effort.",
+        "tag": "purpose"
+      },
+      {
+        "id": "citizen-7",
+        "type": "mcq",
+        "question": "Why did the researchers avoid crediting the lesson alone for better identification rates?",
+        "options": [
+          "There were no photographs in the second season.",
+          "The specialists refused to check any records.",
+          "All contributors had been replaced with new volunteers.",
+          "Returning contributors may also have improved through experience."
+        ],
+        "answer": "Returning contributors may also have improved through experience.",
+        "explanation": "Paragraph 4 identifies experience among returning volunteers as another possible explanation.",
+        "tag": "causal caution"
+      },
+      {
+        "id": "citizen-8",
+        "type": "mcq",
+        "question": "Which approach best matches the final report?",
+        "options": [
+          "Use volunteer records to flag possible changes, then conduct consistent specialist surveys.",
+          "Treat every missing photograph as proof of a species disappearing.",
+          "Judge success only by the total number of uploads.",
+          "Replace all professional field visits with casual photographs."
+        ],
+        "answer": "Use volunteer records to flag possible changes, then conduct consistent specialist surveys.",
+        "explanation": "The final paragraph recommends broad participation plus targeted specialist follow-up with a consistent method.",
+        "tag": "main recommendation"
+      }
+    ]
+  },
+  {
+    "id": "language-repair",
+    "title": "Language: repair common writing errors",
+    "skill": "Language",
+    "minutes": 12,
+    "description": "Original learning drill, not an official IELTS test. Choose the one grammatically correct sentence that preserves the intended meaning. Review the rule, then apply it in a new sentence of your own. This is not a Writing band assessment.",
+    "passage": "Each item targets one useful feature of clear Academic Writing: agreement, articles, countability, comparison, time, contrast, cautious claims, prepositions, parallel structure or relative clauses. The figures and examples are invented for practice. Choose an answer before opening the explanation. Correct answers here show control of these particular items; they do not establish performance in a full essay.",
+    "questions": [
+      {
+        "id": "language-1",
+        "type": "mcq",
+        "question": "Choose the grammatically correct sentence.",
+        "options": [
+          "The number of students are increasing each year.",
+          "The number of students is increasing each year.",
+          "The number of students have increasing each year.",
+          "The number of students increase it each year."
+        ],
+        "answer": "The number of students is increasing each year.",
+        "explanation": "The head noun is the singular number, so use is. Compare: A number of students are absent, where a number of means several.",
+        "tag": "subject-verb agreement"
+      },
+      {
+        "id": "language-2",
+        "type": "mcq",
+        "question": "Choose the grammatically correct sentence.",
+        "options": [
+          "Public transport plays an important role in a city.",
+          "Public transport plays important role in a city.",
+          "Public transport plays a important role in a city.",
+          "Public transport play an important role in a city."
+        ],
+        "answer": "Public transport plays an important role in a city.",
+        "explanation": "The singular countable noun role needs an article here. Important starts with a vowel sound, so use an. Public transport is singular in this sentence, so use plays.",
+        "tag": "articles"
+      },
+      {
+        "id": "language-3",
+        "type": "mcq",
+        "question": "Choose the grammatically correct sentence.",
+        "options": [
+          "The website provides many useful informations.",
+          "The website provide much useful information.",
+          "The website provides a useful information.",
+          "The website provides useful information."
+        ],
+        "answer": "The website provides useful information.",
+        "explanation": "Information is uncountable in standard English: use useful information or a useful piece of information, not informations or a information.",
+        "tag": "countability"
+      },
+      {
+        "id": "language-4",
+        "type": "mcq",
+        "question": "The intended meaning is that the proportion was 20% in 2010 and 40% in 2020. Choose the correct sentence.",
+        "options": [
+          "The proportion was twice as high in 2020 than in 2010.",
+          "The proportion was double as high in 2020 as in 2010.",
+          "The proportion was twice as high in 2020 as in 2010.",
+          "The proportion was twice higher as in 2020 than in 2010."
+        ],
+        "answer": "The proportion was twice as high in 2020 as in 2010.",
+        "explanation": "Use twice as + adjective + as for this comparison. Forty percent is twice twenty percent.",
+        "tag": "comparisons"
+      },
+      {
+        "id": "language-5",
+        "type": "mcq",
+        "question": "Both dates are in the past. Choose the grammatically correct sentence.",
+        "options": [
+          "Sales has risen from 200 to 300 between 2010 and 2015.",
+          "Sales rose from 200 to 300 between 2010 and 2015.",
+          "Sales have rise from 200 to 300 between 2010 and 2015.",
+          "Sales rising from 200 to 300 between 2010 and 2015."
+        ],
+        "answer": "Sales rose from 200 to 300 between 2010 and 2015.",
+        "explanation": "Use the simple past, rose, for a change within a completed past period. The other options contain tense, agreement or sentence-completeness errors.",
+        "tag": "past tense"
+      },
+      {
+        "id": "language-6",
+        "type": "mcq",
+        "question": "Choose the grammatically correct sentence expressing a contrast.",
+        "options": [
+          "Whereas bus use fell, rail use increased.",
+          "Whereas bus use fell, but rail use increased.",
+          "Despite bus use fell, rail use increased.",
+          "Although bus use fell, but rail use increased."
+        ],
+        "answer": "Whereas bus use fell, rail use increased.",
+        "explanation": "Whereas links two contrasting clauses. Do not add but to the same structure. Despite normally takes a noun phrase or an -ing form, or despite the fact that + clause.",
+        "tag": "contrast clauses"
+      },
+      {
+        "id": "language-7",
+        "type": "mcq",
+        "question": "The data show an association but do not establish a cause. Choose the grammatically correct sentence that preserves this caution.",
+        "options": [
+          "The association proves that commuting causes stress.",
+          "The association may suggests a relationship between commuting and stress.",
+          "The association may suggest a relationship between commuting and stress.",
+          "The association suggesting a relationship between commuting and stress."
+        ],
+        "answer": "The association may suggest a relationship between commuting and stress.",
+        "explanation": "May correctly keeps the claim cautious, and a modal verb takes the base form suggest. An association by itself does not justify the stronger causal claim in the first option.",
+        "tag": "cautious claims"
+      },
+      {
+        "id": "language-8",
+        "type": "mcq",
+        "question": "The rate changed from 10% to 15%. Choose the grammatically correct sentence describing both endpoints.",
+        "options": [
+          "The rate increased by 10% at 15%.",
+          "The rate increased from 10% to 15%.",
+          "The rate increased of 10% for 15%.",
+          "The rate increased in 10% until 15%."
+        ],
+        "answer": "The rate increased from 10% to 15%.",
+        "explanation": "Use from for the starting point and to for the ending point. The difference is five percentage points; do not confuse that with the endpoints.",
+        "tag": "change prepositions"
+      },
+      {
+        "id": "language-9",
+        "type": "mcq",
+        "question": "Choose the grammatically correct sentence.",
+        "options": [
+          "The programme aim to reduce waste, save energy and improve safety.",
+          "The programme aims reduce waste, save energy and improve safety.",
+          "The programme aims to reducing waste, saving energy and improving safety.",
+          "The programme aims to reduce waste, save energy and improve safety."
+        ],
+        "answer": "The programme aims to reduce waste, save energy and improve safety.",
+        "explanation": "The three coordinated verbs share to: to reduce, save and improve. Keep the forms parallel. Aim takes to + base verb in this structure.",
+        "tag": "parallel structure"
+      },
+      {
+        "id": "language-10",
+        "type": "mcq",
+        "question": "Choose the grammatically correct sentence.",
+        "options": [
+          "The city which population grew fastest built two hospitals.",
+          "The city whose its population grew fastest built two hospitals.",
+          "The city whose population grew fastest built two hospitals.",
+          "The city who population grew fastest built two hospitals."
+        ],
+        "answer": "The city whose population grew fastest built two hospitals.",
+        "explanation": "Whose expresses the relationship between the city and its population. It can refer to places or things as well as people. Do not add its after whose.",
+        "tag": "relative clauses"
+      }
+    ]
+  }
+]
