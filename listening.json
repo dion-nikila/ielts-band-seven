@@ -1,0 +1,353 @@
+[
+  {
+    "id": "listening-booking",
+    "title": "A kayaking course booking",
+    "skill": "Listening",
+    "minutes": 8,
+    "description": "Original IELTS-inspired mini-drill with a single synthetic voice; not an official test or band predictor. Read the 8 questions, listen once, submit your answers, then replay and check the transcript. Notice corrections and distinguish included services from extras.",
+    "passage": "Hello, this is Lena from Riverway Outdoor Centre, returning your call about the kayaking course. You mentioned that you have never tried the sport, so I have reserved a place on the beginner course. Our intermediate group would require previous experience.\n\nYour session is on Thursday. I originally said Tuesday, but the instructor is attending a training event that day. Please arrive at 9:45 to collect your equipment. The activity itself begins at ten, and we cannot admit anyone after the safety briefing.\n\nWe used to meet at the boathouse. Because work is being done on its roof, your group should meet at the visitor centre. The sign at the main gate shows the way. Your instructor's surname is Morgan; that is M, O, R, G, A, N.\n\nThe adult course costs 38 pounds. There is a reduced student price of 32 pounds, but you said you are booking as an adult. Transport from the centre to the river is included. Lunch is not, and waterproof jackets are available for an additional charge. Bring your own drinking water.\n\nFinally, ordinary rain will not stop us. If the river becomes unsafe, we will run an indoor safety workshop instead. We will not simply move the booking to another week. Please call if your contact number changes.",
+    "audio": "audio/listening-booking.m4a",
+    "questions": [
+      {
+        "id": "booking-1",
+        "type": "mcq",
+        "question": "Which course has been reserved?",
+        "options": [
+          "the intermediate group",
+          "the beginner course",
+          "a training event"
+        ],
+        "answer": "the beginner course",
+        "explanation": "Lena says she has reserved a place on the beginner course because the listener has never tried kayaking. The intermediate group requires experience.",
+        "tag": "listening for the confirmed choice"
+      },
+      {
+        "id": "booking-2",
+        "type": "text",
+        "question": "The session is on _____. Write ONE WORD.",
+        "options": [],
+        "answer": "Thursday",
+        "accepted": [
+          "thursday"
+        ],
+        "explanation": "Thursday is the confirmed day. Tuesday is the original information and is explicitly corrected.",
+        "tag": "corrected information"
+      },
+      {
+        "id": "booking-3",
+        "type": "text",
+        "question": "Arrival time for collecting equipment: _____. Write A NUMBER.",
+        "options": [],
+        "answer": "9:45",
+        "accepted": [
+          "9.45",
+          "09:45",
+          "09.45",
+          "9:45 am",
+          "9:45am",
+          "9.45 am",
+          "9.45am",
+          "09:45 am",
+          "9:45 a.m.",
+          "nine forty-five",
+          "nine forty five"
+        ],
+        "explanation": "Arrive at 9:45 to collect equipment. Ten is the activity start time, not the arrival time.",
+        "tag": "distinguishing related times"
+      },
+      {
+        "id": "booking-4",
+        "type": "mcq",
+        "question": "Where should this group meet?",
+        "options": [
+          "the boathouse",
+          "the main gate",
+          "the visitor centre"
+        ],
+        "answer": "the visitor centre",
+        "explanation": "The boathouse is the old meeting place. Roof work means the group should now meet at the visitor centre; the main gate only has a sign.",
+        "tag": "changed arrangements"
+      },
+      {
+        "id": "booking-5",
+        "type": "text",
+        "question": "Instructor's surname: _____. Write ONE WORD.",
+        "options": [],
+        "answer": "Morgan",
+        "accepted": [
+          "morgan"
+        ],
+        "explanation": "The surname is given and then spelled M, O, R, G, A, N.",
+        "tag": "spelling a name"
+      },
+      {
+        "id": "booking-6",
+        "type": "text",
+        "question": "Adult course price: £_____. Write A NUMBER.",
+        "options": [],
+        "answer": "38",
+        "accepted": [
+          "38.00",
+          "thirty-eight",
+          "thirty eight"
+        ],
+        "explanation": "The adult course costs 38 pounds. The 32-pound price is for students.",
+        "tag": "selecting the relevant price"
+      },
+      {
+        "id": "booking-7",
+        "type": "mcq",
+        "question": "Which service is included in the course price?",
+        "options": [
+          "Transport from the centre to the river",
+          "A packed lunch",
+          "Waterproof jacket hire"
+        ],
+        "answer": "Transport from the centre to the river",
+        "explanation": "Transport is included. Lunch is not included, and waterproof jackets cost extra.",
+        "tag": "included versus extra"
+      },
+      {
+        "id": "booking-8",
+        "type": "mcq",
+        "question": "What will happen if the river becomes unsafe?",
+        "options": [
+          "an alternative outdoor activity",
+          "an indoor safety workshop",
+          "a replacement session the following week"
+        ],
+        "answer": "an indoor safety workshop",
+        "explanation": "Unsafe river conditions lead to an indoor safety workshop. Ordinary rain alone does not stop the activity, and moving to another week is explicitly rejected.",
+        "tag": "conditions and alternatives"
+      }
+    ]
+  },
+  {
+    "id": "listening-campus",
+    "title": "New students on campus",
+    "skill": "Listening",
+    "minutes": 8,
+    "description": "Original IELTS-inspired campus announcement with a single synthetic voice; not an official test or band predictor. Read the 8 questions first. Listen for room numbers, quantities and the final arrangement when the speaker changes a detail.",
+    "passage": "Welcome to Westbridge College. Before we begin the campus tour, I need to explain a few arrangements for your first week. Tomorrow's induction starts at ten. Your welcome email says room 207, but the group is larger than expected, so please use room 214 instead. Both rooms are on the second floor.\n\nYou may have noticed that the main library is closed. This is because of electrical repairs, rather than a shortage of staff. A temporary borrowing desk is operating in the student centre. New students can borrow up to 6 books at a time. That limit increases later in the year.\n\nYour student card also gives you 10 pounds of printing credit. Extra credit can be purchased online. For anyone cycling to college, the new bicycle racks are behind the sports hall. The spaces beside the station belong to the railway company.\n\nThe careers team welcomes visitors without appointments this week, but you must arrive before 11 in the morning. After that, advisers will be interviewing applicants.\n\nThe shared kitchen is open all day. It is busiest between twelve and one, so eating slightly later may be more comfortable. Finally, if you cannot connect your laptop to the college network, book an online appointment with the computer support team. Taking it directly to reception will not get you technical help.",
+    "audio": "audio/listening-campus.m4a",
+    "questions": [
+      {
+        "id": "campus-1",
+        "type": "text",
+        "question": "Room for tomorrow's induction: _____. Write A NUMBER.",
+        "options": [],
+        "answer": "214",
+        "accepted": [
+          "two hundred fourteen",
+          "two hundred and fourteen",
+          "two one four"
+        ],
+        "explanation": "Room 207 appears in the old email, but the larger group will use room 214 instead.",
+        "tag": "corrected room number"
+      },
+      {
+        "id": "campus-2",
+        "type": "mcq",
+        "question": "Why is the main library closed?",
+        "options": [
+          "a shortage of staff",
+          "a larger intake of students",
+          "electrical repairs"
+        ],
+        "answer": "electrical repairs",
+        "explanation": "The speaker explicitly gives electrical repairs as the cause and rejects staff shortage. The larger group explains the induction room change.",
+        "tag": "identifying a reason"
+      },
+      {
+        "id": "campus-3",
+        "type": "text",
+        "question": "Maximum books a new student can borrow now: _____. Write A NUMBER.",
+        "options": [],
+        "answer": "6",
+        "accepted": [
+          "six"
+        ],
+        "explanation": "New students can borrow up to 6 books at a time. A later increase does not change the current limit.",
+        "tag": "current versus future limits"
+      },
+      {
+        "id": "campus-4",
+        "type": "text",
+        "question": "Printing credit on the student card: £_____. Write A NUMBER.",
+        "options": [],
+        "answer": "10",
+        "accepted": [
+          "10.00",
+          "ten"
+        ],
+        "explanation": "The student card provides 10 pounds of printing credit; additional credit has to be purchased.",
+        "tag": "listening for quantities"
+      },
+      {
+        "id": "campus-5",
+        "type": "mcq",
+        "question": "Where are the college's new bicycle racks?",
+        "options": [
+          "behind the sports hall",
+          "beside the station",
+          "in the student centre"
+        ],
+        "answer": "behind the sports hall",
+        "explanation": "The college's new racks are behind the sports hall. The spaces beside the station are owned by the railway company, while the student centre has the borrowing desk.",
+        "tag": "distinguishing locations"
+      },
+      {
+        "id": "campus-6",
+        "type": "text",
+        "question": "To visit careers advisers without an appointment this week, arrive before _____ a.m. Write A NUMBER.",
+        "options": [],
+        "answer": "11",
+        "accepted": [
+          "11:00",
+          "11.00",
+          "eleven"
+        ],
+        "explanation": "Visitors without appointments must arrive before 11 in the morning. After that, the advisers have interviews.",
+        "tag": "time limits"
+      },
+      {
+        "id": "campus-7",
+        "type": "mcq",
+        "question": "When is the shared kitchen busiest?",
+        "options": [
+          "before 11 in the morning",
+          "between twelve and one",
+          "all day"
+        ],
+        "answer": "between twelve and one",
+        "explanation": "The kitchen is open all day, but its busiest period is between twelve and one. Opening hours and peak use are different details.",
+        "tag": "opening time versus peak time"
+      },
+      {
+        "id": "campus-8",
+        "type": "mcq",
+        "question": "What should students do if a laptop cannot connect to the college network?",
+        "options": [
+          "take the laptop straight to reception",
+          "wait for tomorrow’s induction",
+          "book an online appointment"
+        ],
+        "answer": "book an online appointment",
+        "explanation": "Students should book an online appointment with computer support. Reception will not provide technical help, and the induction is not offered as a solution to this problem.",
+        "tag": "recommended action"
+      }
+    ]
+  },
+  {
+    "id": "listening-project",
+    "title": "Planning a local history project",
+    "skill": "Listening",
+    "minutes": 8,
+    "description": "Original IELTS-inspired project briefing with a single synthetic voice; not an official test or band predictor. Read the questions, listen once and distinguish the team's final decisions from rejected ideas. Review the evidence after submitting.",
+    "passage": "Here is the final plan for our local history project. We considered analysing newspaper articles, but our tutor suggested interviews with residents because personal memories would give us a different kind of evidence. We will still read a little background material before meeting anyone.\n\nAt first, we hoped to recruit thirty people. That would take too long, so our target is now 24 participants. We want a mixture of ages, although everyone must have lived in the town for at least five years.\n\nThe tutor checked our draft questions yesterday. She thought the topics were relevant, but several questions were too technical. We need to replace specialist terms with everyday language. She did not ask us to add more questions.\n\nEach interview should last about 15 minutes. The original idea was half an hour, but volunteers may struggle to spare that much time. We have permission to use a quiet room at the museum. A café would be convenient, but background noise would make the recordings difficult to understand.\n\nPlease finish revising the questions by Friday. Our pilot interview is on Saturday, which gives us one day to prepare. Its main purpose is to test the recording equipment, since we have not used these microphones before. After collecting all the interviews, each pair will write a summary. Keep that summary to a maximum of 600 words, excluding the list of sources.",
+    "audio": "audio/listening-project.m4a",
+    "questions": [
+      {
+        "id": "project-1",
+        "type": "mcq",
+        "question": "What will be the project's main source of evidence?",
+        "options": [
+          "interviews with residents",
+          "newspaper articles",
+          "background material"
+        ],
+        "answer": "interviews with residents",
+        "explanation": "The tutor recommended interviews with residents for personal memories. Newspaper analysis was considered, and background reading remains only preparation.",
+        "tag": "final decision versus earlier idea"
+      },
+      {
+        "id": "project-2",
+        "type": "text",
+        "question": "Current recruitment target: _____ participants. Write A NUMBER.",
+        "options": [],
+        "answer": "24",
+        "accepted": [
+          "twenty-four",
+          "twenty four"
+        ],
+        "explanation": "Thirty was the original hope. The current target is 24 because recruiting thirty would take too long.",
+        "tag": "corrected quantity"
+      },
+      {
+        "id": "project-3",
+        "type": "mcq",
+        "question": "What problem did the tutor identify in the draft questions?",
+        "options": [
+          "too personal",
+          "too technical",
+          "too repetitive"
+        ],
+        "answer": "too technical",
+        "explanation": "Several questions were too technical, so specialist terms need simpler wording. The tutor does not describe the questions as personal or repetitive.",
+        "tag": "interpreting feedback"
+      },
+      {
+        "id": "project-4",
+        "type": "text",
+        "question": "Planned length of each interview: _____ minutes. Write A NUMBER.",
+        "options": [],
+        "answer": "15",
+        "accepted": [
+          "fifteen"
+        ],
+        "explanation": "The final plan is about 15 minutes. Half an hour was the original idea and was rejected because of volunteers' time.",
+        "tag": "revised duration"
+      },
+      {
+        "id": "project-5",
+        "type": "mcq",
+        "question": "Where will the interviews take place?",
+        "options": [
+          "a café",
+          "the library",
+          "the museum"
+        ],
+        "answer": "the museum",
+        "explanation": "The team has permission to use a quiet room at the museum. The café is rejected because background noise would harm the recordings. No library location is proposed.",
+        "tag": "location and distractor"
+      },
+      {
+        "id": "project-6",
+        "type": "text",
+        "question": "Deadline for revising the questions: _____. Write ONE WORD.",
+        "options": [],
+        "answer": "Friday",
+        "accepted": [
+          "friday"
+        ],
+        "explanation": "The revisions are due by Friday. Saturday is the pilot interview date, a separate event.",
+        "tag": "matching dates to events"
+      },
+      {
+        "id": "project-7",
+        "type": "mcq",
+        "question": "What is the main purpose of the pilot interview?",
+        "options": [
+          "to test the recording equipment",
+          "to collect all the interviews",
+          "to recruit more volunteers"
+        ],
+        "answer": "to test the recording equipment",
+        "explanation": "The speaker explicitly identifies testing the unfamiliar recording equipment as the pilot's main purpose.",
+        "tag": "listening for purpose"
+      },
+      {
+        "id": "project-8",
+        "type": "text",
+        "question": "Maximum summary length, excluding sources: _____ words. Write A NUMBER.",
+        "options": [],
+        "answer": "600",
+        "accepted": [
+          "six hundred"
+        ],
+        "explanation": "Each pair's summary has a maximum of 600 words. The sources list is excluded from that limit.",
+        "tag": "word limits and exclusions"
+      }
+    ]
+  }
+]

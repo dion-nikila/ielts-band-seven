@@ -1,0 +1,348 @@
+[
+  {
+    "id": "reading-energy-storage",
+    "title": "Reading: choosing what to store",
+    "skill": "Reading",
+    "minutes": 14,
+    "description": "Original IELTS-inspired learning drill, not an official IELTS test or a validated band predictor. The island, trial, researchers and results are fictional. Answer from the passage only. For the paragraph-heading question, choose the main idea rather than a supporting detail.",
+    "passage": "A. On the fictional island of Ellmere, wind turbines often produced more electricity at night than residents needed. During evening peaks, however, the island still imported power through an undersea cable. The council initially described this as a shortage of storage. An engineering team argued that the phrase concealed several different problems: keeping electricity available after the wind fell, reducing demand at particular hours, and maintaining essential services during a cable fault. A device suitable for one purpose might contribute little to another.\n\nB. The team compared a battery beside the ferry terminal with an insulated water tank beneath the museum. The battery returned electricity to the local network and was sized to cover roughly two hours of typical evening demand. The tank served a narrower purpose. Water chilled overnight circulated through the museum's cooling system the following afternoon, allowing its electric chillers to remain off during expensive hours. The tank could shift cooling demand, but could not supply electricity to homes. Its usefulness therefore depended on the service needed, not simply its capacity.\n\nC. During an eight-week summer trial, the tank reduced the museum's peak demand by almost a third. Nevertheless, the museum used slightly more electricity for cooling across the full day, because some stored cooling was lost before use. Its bill still fell under the island's time-dependent tariff. The battery also reduced evening imports, but its charge was frequently exhausted before the peak ended. The researchers cautioned that lower bills, lower total energy use and greater independence from the cable were separate outcomes. Success against one measure did not establish success against the others.\n\nD. A further complication concerned operating rules. In the first fortnight, both systems followed fixed schedules based on average demand. Later, operators adjusted those schedules using weather forecasts and bookings for museum events. Peak demand fell further, although the equipment itself had not changed. Because the revised controls were introduced after the first fortnight, the team could not separate their effect completely from changes in weather and visitor numbers. It recommended testing both control strategies during comparable periods before assigning a precise share of the improvement to forecasting.\n\nE. The final report rejected a ranking based solely on the purchase price of each unit of storage. The battery's ability to serve several electrical uses had to be considered alongside the tank's cheaper provision of one service. Neither installation was designed to keep the entire island operating throughout a prolonged cable failure. For the next trial, the team proposed recording unmet demand during simulated interruptions, as well as bills and electricity consumption. The council retained both systems and postponed a larger purchase until it had evidence about the particular problem that expansion should solve.",
+    "questions": [
+      {
+        "id": "energy-1",
+        "type": "mcq",
+        "question": "Matching headings: which heading best expresses the main idea of paragraph B?",
+        "options": [
+          "Choosing storage according to the service it must provide",
+          "Comparing the two installations' daily electricity losses",
+          "Reducing both installations' operating costs through night-time charging",
+          "Estimating how long the island could operate without its cable"
+        ],
+        "answer": "Choosing storage according to the service it must provide",
+        "explanation": "Paragraph B contrasts an electricity-supplying battery with a tank that supplies cooling, then explicitly links usefulness to the service required. Duration and overnight cooling are supporting details; losses and cost results appear later.",
+        "tag": "matching headings"
+      },
+      {
+        "id": "energy-2",
+        "type": "tfng",
+        "question": "During the trial, the tank lowered the total daily amount of electricity used to cool the museum.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "explanation": "Paragraph C says daily cooling electricity increased slightly because stored cooling was lost. Peak demand and the bill fell, but total daily use did not.",
+        "tag": "distinguishing measures"
+      },
+      {
+        "id": "energy-3",
+        "type": "tfng",
+        "question": "The battery was designed to cover approximately two hours of typical evening demand.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "True",
+        "explanation": "Paragraph B states that it was sized for roughly two hours of typical evening demand. This does not imply that it covered every evening peak in practice.",
+        "tag": "paraphrase"
+      },
+      {
+        "id": "energy-4",
+        "type": "tfng",
+        "question": "The museum's visitors preferred the new cooling system to the previous one.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "explanation": "The passage discusses visitor numbers as a possible influence on demand, but reports no visitor preferences or comfort ratings. Neither preference is established.",
+        "tag": "not given"
+      },
+      {
+        "id": "energy-5",
+        "type": "mcq",
+        "question": "Why could the team not attribute all the later reduction in peak demand to the revised operating schedules?",
+        "options": [
+          "The museum's electricity tariff changed after the first fortnight.",
+          "Both control strategies were tested simultaneously on identical equipment.",
+          "The later period also differed in weather and museum attendance.",
+          "The battery's storage capacity was increased at the same time."
+        ],
+        "answer": "The later period also differed in weather and museum attendance.",
+        "explanation": "Paragraph D says the controls changed between periods, so weather and visitor differences could also explain some improvement. Equipment stayed unchanged; a tariff change is not stated; simultaneous comparable testing was recommended, not already completed.",
+        "tag": "causal inference"
+      },
+      {
+        "id": "energy-6",
+        "type": "text",
+        "question": "Complete with NO MORE THAN TWO WORDS from paragraph C: The tank reduced the museum's ______ by almost a third.",
+        "options": [],
+        "answer": "peak demand",
+        "accepted": [
+          "peak demand"
+        ],
+        "explanation": "The first sentence of paragraph C gives 'peak demand'. 'Electricity use' would describe a different measure and would contradict the next sentence.",
+        "tag": "sentence completion"
+      },
+      {
+        "id": "energy-7",
+        "type": "mcq",
+        "question": "Which comparison would most closely follow the final report's recommendation?",
+        "options": [
+          "Choose the system with the lowest bill as evidence of the lowest electricity consumption.",
+          "Choose the larger installation on the assumption that it can cover a prolonged cable fault.",
+          "Compare purchase costs together with the different services each system can deliver.",
+          "Rank the systems by cost per unit because both supply interchangeable services."
+        ],
+        "answer": "Compare purchase costs together with the different services each system can deliver.",
+        "explanation": "Paragraph E rejects price alone and weighs electrical flexibility against cheaper cooling provision. Paragraph C separates bills from consumption, and paragraph E says neither system was designed for a prolonged island-wide outage.",
+        "tag": "writer's recommendation"
+      },
+      {
+        "id": "energy-8",
+        "type": "text",
+        "question": "Complete with NO MORE THAN TWO WORDS from paragraph E: To evaluate interruption performance, the next trial would record ______.",
+        "options": [],
+        "answer": "unmet demand",
+        "accepted": [
+          "unmet demand"
+        ],
+        "explanation": "Paragraph E proposes recording 'unmet demand during simulated interruptions'. Bills and consumption remain additional measures, not the requested interruption measure.",
+        "tag": "locating detail"
+      }
+    ]
+  },
+  {
+    "id": "reading-library-change",
+    "title": "Reading: when a library's numbers disagree",
+    "skill": "Reading",
+    "minutes": 14,
+    "description": "Original IELTS-inspired learning drill, not an official IELTS test or a validated band predictor. Dunsford, its library, the consultation and trial results are fictional. Distinguish reported facts from explanations that the evidence cannot establish.",
+    "passage": "A. When the fictional Dunsford Library reopened after renovation, its annual entrance count rose by 18 per cent, while recorded book loans fell by 6 per cent. Some councillors interpreted the contrast as evidence that the building had become a social venue at the expense of reading. The manager argued that neither figure explained what visitors actually did. An entrance counter recorded a person entering, not their purpose, while a loan total excluded reading inside the building and use of digital materials that were recorded in a separate system.\n\nB. The renovation replaced a seldom-used exhibition area with two bookable meeting rooms and moved several shelves to create wider aisles. It also removed twelve quiet seats near a window. This reduction mattered because an earlier consultation had already identified difficulty finding quiet study space. The report did not say that every visitor wanted silence: families had requested more activity space, and local organisations wanted affordable meeting rooms. The changes therefore involved competing demands within a fixed floor area, rather than a newly discovered preference shared by all users.\n\nC. To understand the figures better, staff conducted observations at selected times and invited visitors to complete short exit cards. The cards asked which services people used, allowing several answers. Someone attending a meeting might also borrow a novel or use a computer. Staff recorded these combinations separately instead of assigning each person one principal purpose. Observations could identify occupied desks but could not establish whether a person was studying a printed book, reading an electronic text or waiting for an appointment. The manager treated the two sources as complementary, with different limitations.\n\nD. A six-week trial then offered a quiet morning on alternate Saturdays, with organised activities moved to the afternoon. Attendance at the quiet sessions was lower than attendance on ordinary Saturday mornings, but the available study seats were more heavily occupied. Exit cards reported better satisfaction with noise levels during the quiet sessions. The team nevertheless warned against treating this as a clean experiment: visitors knew the timetable and could choose a session that suited them. The trial therefore showed who used each arrangement, without proving that the same people would prefer quiet mornings under both conditions.\n\nE. Meanwhile, collection lockers outside the building allowed readers to collect reserved books after the library closed. Locker collections increased, although staff could not determine how many replaced an ordinary visit and how many represented additional use. For its next review, the council agreed to publish entrance counts, print loans, digital use, seat occupancy and satisfaction separately. It also requested a count of people unable to find a suitable seat. The objective was to make trade-offs visible, rather than compress different services into a single number labelled library success.",
+    "questions": [
+      {
+        "id": "library-1",
+        "type": "tfng",
+        "question": "The annual entrance count and the recorded book-loan total both increased after the renovation.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "explanation": "Paragraph A gives opposite changes: entrances rose 18 per cent, but recorded book loans fell 6 per cent. 'Both increased' directly contradicts those figures.",
+        "tag": "comparison"
+      },
+      {
+        "id": "library-2",
+        "type": "text",
+        "question": "Complete with NO MORE THAN TWO WORDS from paragraph B: The renovation removed twelve ______ near a window.",
+        "options": [],
+        "answer": "quiet seats",
+        "accepted": [
+          "quiet seats"
+        ],
+        "explanation": "Paragraph B states that twelve 'quiet seats' were removed. The question requests words from the passage, so a synonym such as 'silent chairs' is not an acceptable extraction.",
+        "tag": "sentence completion"
+      },
+      {
+        "id": "library-3",
+        "type": "tfng",
+        "question": "The first evidence of difficulty finding quiet study space appeared after the renovation.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "explanation": "Paragraph B says an earlier consultation had already identified this difficulty. The concern therefore existed before the renovation, not first afterwards.",
+        "tag": "time reference"
+      },
+      {
+        "id": "library-4",
+        "type": "mcq",
+        "question": "Matching headings: which heading best fits paragraph C?",
+        "options": [
+          "Combining sources to understand overlapping uses",
+          "Measuring the relative popularity of printed and electronic reading",
+          "Replacing entrance counters with continuous desk observation",
+          "Finding the principal purpose of each visitor's trip"
+        ],
+        "answer": "Combining sources to understand overlapping uses",
+        "explanation": "Paragraph C explains how observations and multi-answer exit cards reveal different things and work together. Staff deliberately avoided one principal purpose; observations could not distinguish print from electronic reading; replacing counters is not proposed.",
+        "tag": "matching headings"
+      },
+      {
+        "id": "library-5",
+        "type": "tfng",
+        "question": "Young adults made more meeting-room bookings than any other age group.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "explanation": "The passage reports requests for meeting rooms, but gives no booking totals by age. A ranking of age groups cannot be determined.",
+        "tag": "not given"
+      },
+      {
+        "id": "library-6",
+        "type": "mcq",
+        "question": "What prevented the quiet-morning trial from establishing that the timetable itself caused higher noise satisfaction?",
+        "options": [
+          "The trial changed the timetable after visitors had arrived without warning.",
+          "Satisfaction was measured only on ordinary Saturday mornings.",
+          "People could select sessions according to preferences they already held.",
+          "Quiet sessions attracted more visitors and therefore more occupied seats."
+        ],
+        "answer": "People could select sessions according to preferences they already held.",
+        "explanation": "Paragraph D identifies self-selection: visitors knew the timetable and chose a suitable session. Different groups may explain some satisfaction difference. Quiet attendance was lower, and the sessions were announced, not an unannounced change.",
+        "tag": "research limitation"
+      },
+      {
+        "id": "library-7",
+        "type": "tfng",
+        "question": "The outside lockers made it possible to collect a reserved book when the library building was closed.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "True",
+        "explanation": "The first sentence of paragraph E explicitly says readers could collect reserved books after the library closed.",
+        "tag": "paraphrase"
+      },
+      {
+        "id": "library-8",
+        "type": "mcq",
+        "question": "Which conclusion about the increase in locker collections is justified?",
+        "options": [
+          "It shows that total library visits would have increased without the lockers.",
+          "It explains the entire reduction in recorded book loans after renovation.",
+          "It does not reveal how much collection activity was additional rather than displaced from visits.",
+          "It establishes that most locker users had stopped entering the building."
+        ],
+        "answer": "It does not reveal how much collection activity was additional rather than displaced from visits.",
+        "explanation": "Paragraph E says staff could not determine how many collections replaced visits and how many were additional. The increase alone cannot establish any of the other causal or majority claims.",
+        "tag": "limits of evidence"
+      }
+    ]
+  },
+  {
+    "id": "reading-memory-retrieval",
+    "title": "Reading: the misleading comfort of familiarity",
+    "skill": "Reading",
+    "minutes": 14,
+    "description": "Original IELTS-inspired learning drill, not an official IELTS test or a validated band predictor. This is a fictional learning experiment with invented participants and results; do not treat its figures as published research. Use only the passage to answer all eight questions.",
+    "passage": "A. In a fictional study at Marston College, adult volunteers learned twenty unfamiliar geographical terms. The researchers wanted to compare the feeling of knowing with the ability to produce an answer later. All volunteers first read the same explanations and examples. They then practised for the same total length of time, but were assigned to different methods. One group reread the material throughout practice. The other covered each explanation, attempted to recall it, and then checked the original before moving on.\n\nB. Immediately after practice, both groups judged how well they expected to remember the terms a week later. The rereading group gave higher predictions and performed slightly better on a test taken straight away. Familiar wording remained easy to recognise, and answers were still readily available. A week later, however, the recall-and-check group produced more correct explanations on an unannounced test. The researchers argued that immediate ease had been an unreliable guide to the particular delayed performance measured here. They did not claim that a comfortable learning session necessarily meant that no learning had occurred.\n\nC. The recall method included more than attempting a difficult answer. After every attempt, volunteers saw the correct explanation, whether their own response had been right or wrong. Researchers kept the first attempt separate from the corrected version in their records. This distinction mattered: a correct answer copied after checking showed successful correction, but did not establish that the answer had been independently retrieved. When reviewing the results, the team examined both initial accuracy and later improvement rather than treating every completed practice item as evidence of secure knowledge.\n\nD. In interviews, several volunteers said that checking answers had made them notice small but important differences between related terms. The researchers saw this as a possible explanation for part of the later advantage, not proof of the mechanism. Their design compared rereading with a package containing recall, checking and correction; it did not isolate the contribution of each component. A future experiment would need additional groups to distinguish the effects of recalling an answer from the effects of receiving feedback. The report therefore recommended the combined procedure while remaining cautious about why it worked.\n\nE. The findings also had a limited scope. The participants had practised brief definitions, not written extended arguments or delivered spoken presentations. The researchers did not conclude that every subject should be practised in exactly the same way. They suggested that learners could monitor themselves more honestly by attempting an answer before reopening notes, recording errors, and returning after a delay. Because study time had been equal between groups, the delayed difference could not be explained simply by one group having practised longer. Whether the same advantage would persist several months later remained outside the study.",
+    "questions": [
+      {
+        "id": "memory-1",
+        "type": "tfng",
+        "question": "On the test immediately after practice, the rereading group performed slightly better than the recall-and-check group.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "True",
+        "explanation": "Paragraph B states that the rereading group performed slightly better on the immediate test. The recall-and-check advantage appeared on the delayed test, so the timing is essential.",
+        "tag": "time reference"
+      },
+      {
+        "id": "memory-2",
+        "type": "tfng",
+        "question": "The groups' predictions correctly identified which group would perform better a week later.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "False",
+        "explanation": "Paragraph B says the rereading group predicted greater success, but the recall-and-check group produced more correct delayed answers. The predicted ranking and observed ranking disagreed.",
+        "tag": "comparison"
+      },
+      {
+        "id": "memory-3",
+        "type": "text",
+        "question": "Complete with NO MORE THAN TWO WORDS from paragraph C: Researchers recorded the ______ separately from the corrected version.",
+        "options": [],
+        "answer": "first attempt",
+        "accepted": [
+          "first attempt"
+        ],
+        "explanation": "Paragraph C explicitly distinguishes the 'first attempt' from the corrected version. A corrected answer is not evidence of independent recall on the first attempt.",
+        "tag": "sentence completion"
+      },
+      {
+        "id": "memory-4",
+        "type": "mcq",
+        "question": "Matching headings: which heading best expresses the main idea of paragraph D?",
+        "options": [
+          "An effective combination whose individual contributions remain uncertain",
+          "Interview evidence establishing why recall alone improved delayed scores",
+          "Additional experimental groups confirming the benefit of correcting errors",
+          "A comparison showing that feedback matters more than recall"
+        ],
+        "answer": "An effective combination whose individual contributions remain uncertain",
+        "explanation": "Paragraph D separates the observed advantage of the combined method from uncertainty about its mechanism. Interviews suggested an explanation, but did not prove it. Extra groups were proposed for a future study, not already tested.",
+        "tag": "matching headings"
+      },
+      {
+        "id": "memory-5",
+        "type": "tfng",
+        "question": "Most volunteers had previously studied geography at university.",
+        "options": [
+          "True",
+          "False",
+          "Not Given"
+        ],
+        "answer": "Not Given",
+        "explanation": "The volunteers learned unfamiliar geographical terms, but their university subjects and prior qualifications are not reported. Unfamiliar terms do not establish a person's entire educational history.",
+        "tag": "not given"
+      },
+      {
+        "id": "memory-6",
+        "type": "mcq",
+        "question": "Which study record would best follow the researchers' recommendation?",
+        "options": [
+          "Keep the answer attempted without notes, the correction and the result of a later attempt.",
+          "Record only immediate test scores because delays make comparisons between methods invalid.",
+          "Replace each wrong initial answer with the correct one and count the completed page.",
+          "Estimate future performance from how easily the explanation can be recognised while reading."
+        ],
+        "answer": "Keep the answer attempted without notes, the correction and the result of a later attempt.",
+        "explanation": "Paragraphs C and E recommend distinguishing initial recall from corrections, recording errors and returning after a delay. Overwriting mistakes, relying on familiarity or ignoring delayed performance loses precisely that evidence.",
+        "tag": "applying a recommendation"
+      },
+      {
+        "id": "memory-7",
+        "type": "text",
+        "question": "Complete with NO MORE THAN TWO WORDS from paragraph E: The delayed advantage was not simply due to extra ______, because this was equal between groups.",
+        "options": [],
+        "answer": "study time",
+        "accepted": [
+          "study time"
+        ],
+        "explanation": "Paragraph E says 'study time had been equal between groups'. It rules out longer practice as a simple explanation; it does not isolate the components of the combined method.",
+        "tag": "controlling a variable"
+      },
+      {
+        "id": "memory-8",
+        "type": "mcq",
+        "question": "Which claim goes beyond the study's evidence?",
+        "options": [
+          "The combined method produced more correct explanations on the one-week test.",
+          "The experiment did not separately measure the effects of recall and feedback.",
+          "The combined method would also improve extended spoken presentations several months later.",
+          "Higher confidence after rereading did not correspond to higher delayed scores here."
+        ],
+        "answer": "The combined method would also improve extended spoken presentations several months later.",
+        "explanation": "Paragraph E excludes extended presentations from the tasks studied and several-month retention from the follow-up. The other three statements are supported in paragraphs B or D.",
+        "tag": "scope of a conclusion"
+      }
+    ]
+  }
+]

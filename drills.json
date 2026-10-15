@@ -64,10 +64,10 @@
         "type": "mcq",
         "question": "Why did the team recommend measuring midday pavement shade?",
         "options": [
-          "It represented an immediate benefit that a planting count could miss.",
-          "It proved that every tree species provided equal benefits.",
+          "It measured pedestrian comfort throughout the winter.",
           "It removed the need to record any new planting.",
-          "It measured pedestrian comfort throughout the winter."
+          "It proved that every tree species provided equal benefits.",
+          "It represented an immediate benefit that a planting count could miss."
         ],
         "answer": "It represented an immediate benefit that a planting count could miss.",
         "explanation": "Paragraph 2 links the shade measure to an immediate benefit for walkers. The final paragraph says the planting count was retained.",
@@ -79,8 +79,8 @@
         "question": "Which finding would be consistent with the explanation in paragraph 4?",
         "options": [
           "Several small replacement trees always produce more shade than one large tree.",
-          "A rising tree count can accompany a reduction in available shade.",
           "Young trees cannot benefit a town in the future.",
+          "A rising tree count can accompany a reduction in available shade.",
           "The number of trees and the amount of shade must change at the same rate."
         ],
         "answer": "A rising tree count can accompany a reduction in available shade.",
@@ -92,10 +92,10 @@
         "type": "mcq",
         "question": "Which limitation did the report identify?",
         "options": [
-          "The study covered residential streets rather than all types of district.",
-          "The team measured only newly planted trees.",
           "No pedestrians were asked about their comfort.",
-          "Building heights differed deliberately between the two groups."
+          "Building heights differed deliberately between the two groups.",
+          "The team measured only newly planted trees.",
+          "The study covered residential streets rather than all types of district."
         ],
         "answer": "The study covered residential streets rather than all types of district.",
         "explanation": "Paragraph 5 states that all twelve streets were residential and the findings were not claimed to apply equally to industrial districts.",
@@ -106,9 +106,9 @@
         "type": "mcq",
         "question": "Why might one photograph give a misleading impression of shade?",
         "options": [
+          "Shade can differ with the time of day.",
           "Its camera could change the age of the trees.",
           "Photographs cannot show pavement.",
-          "Shade can differ with the time of day.",
           "The dashboard no longer included any numbers."
         ],
         "answer": "Shade can differ with the time of day.",
@@ -183,9 +183,9 @@
         "question": "Why should the observed differences not be attributed confidently to the schedule alone?",
         "options": [
           "The software was different in the two groups.",
-          "The volunteers may already have differed from the office group.",
           "The trial never collected any output data.",
-          "The office group was required to work at home."
+          "The office group was required to work at home.",
+          "The volunteers may already have differed from the office group."
         ],
         "answer": "The volunteers may already have differed from the office group.",
         "explanation": "Paragraph 2 explains that voluntary selection creates possible pre-existing differences, such as motivation.",
@@ -196,10 +196,10 @@
         "type": "mcq",
         "question": "What did the output and correction-rate findings mainly concern?",
         "options": [
-          "The invention of new services.",
+          "The long-term quality of staff training.",
           "Time spent signed into computers.",
           "The quantity and accuracy of routine processing.",
-          "The long-term quality of staff training."
+          "The invention of new services."
         ],
         "answer": "The quantity and accuracy of routine processing.",
         "explanation": "Paragraph 3 expressly limits those results to routine processing and excludes creativity and new-service development.",
@@ -210,10 +210,10 @@
         "type": "mcq",
         "question": "What can be concluded about the daily shared availability period?",
         "options": [
-          "The report proved it was the sole reason communication improved.",
-          "It was introduced after communication ratings fell, but its separate effect was not established.",
           "Only office staff were required to be available.",
-          "It caused every employee to leave the hybrid group."
+          "It caused every employee to leave the hybrid group.",
+          "The report proved it was the sole reason communication improved.",
+          "It was introduced after communication ratings fell, but its separate effect was not established."
         ],
         "answer": "It was introduced after communication ratings fell, but its separate effect was not established.",
         "explanation": "Paragraph 4 gives the sequence and says the report could not separate the change's effect from increasing familiarity.",
@@ -224,10 +224,10 @@
         "type": "mcq",
         "question": "Why did the researchers recommend checking the experience of new employees?",
         "options": [
-          "Most trial participants were experienced and could work independently.",
-          "All new employees had resigned during the trial.",
           "New employees had been the only group allowed to work remotely.",
-          "The company planned to stop all staff training."
+          "The company planned to stop all staff training.",
+          "Most trial participants were experienced and could work independently.",
+          "All new employees had resigned during the trial."
         ],
         "answer": "Most trial participants were experienced and could work independently.",
         "explanation": "The final paragraph says experienced staff made up most of the trial group, so newcomers might need a different amount of informal help.",
@@ -302,8 +302,8 @@
         "options": [
           "Photographs from that section were always deleted.",
           "Few records could reflect a low number of observers rather than a low number of insects.",
-          "The project had proved that insects avoided all visitors.",
-          "Every river section received exactly the same survey effort."
+          "Every river section received exactly the same survey effort.",
+          "The project had proved that insects avoided all visitors."
         ],
         "answer": "Few records could reflect a low number of observers rather than a low number of insects.",
         "explanation": "Paragraph 2 explicitly gives observer numbers as an alternative explanation for a low record count.",
@@ -314,10 +314,10 @@
         "type": "mcq",
         "question": "What was the main value of recording timed visits with no target-insect sightings?",
         "options": [
-          "It guaranteed that no insects lived at the location.",
-          "It removed the need to record the visit length.",
+          "It ensured that all casual uploads could be discarded.",
           "It helped separate absence of sightings from absence of observation effort.",
-          "It ensured that all casual uploads could be discarded."
+          "It guaranteed that no insects lived at the location.",
+          "It removed the need to record the visit length."
         ],
         "answer": "It helped separate absence of sightings from absence of observation effort.",
         "explanation": "Paragraph 3 explains that visits without sightings helped distinguish a lack of observations from a lack of effort.",
@@ -328,10 +328,10 @@
         "type": "mcq",
         "question": "Why did the researchers avoid crediting the lesson alone for better identification rates?",
         "options": [
-          "There were no photographs in the second season.",
-          "The specialists refused to check any records.",
           "All contributors had been replaced with new volunteers.",
-          "Returning contributors may also have improved through experience."
+          "There were no photographs in the second season.",
+          "Returning contributors may also have improved through experience.",
+          "The specialists refused to check any records."
         ],
         "answer": "Returning contributors may also have improved through experience.",
         "explanation": "Paragraph 4 identifies experience among returning volunteers as another possible explanation.",
@@ -342,10 +342,10 @@
         "type": "mcq",
         "question": "Which approach best matches the final report?",
         "options": [
-          "Use volunteer records to flag possible changes, then conduct consistent specialist surveys.",
-          "Treat every missing photograph as proof of a species disappearing.",
           "Judge success only by the total number of uploads.",
-          "Replace all professional field visits with casual photographs."
+          "Replace all professional field visits with casual photographs.",
+          "Use volunteer records to flag possible changes, then conduct consistent specialist surveys.",
+          "Treat every missing photograph as proof of a species disappearing."
         ],
         "answer": "Use volunteer records to flag possible changes, then conduct consistent specialist surveys.",
         "explanation": "The final paragraph recommends broad participation plus targeted specialist follow-up with a consistent method.",
@@ -367,9 +367,9 @@
         "question": "Choose the grammatically correct sentence.",
         "options": [
           "The number of students are increasing each year.",
-          "The number of students is increasing each year.",
           "The number of students have increasing each year.",
-          "The number of students increase it each year."
+          "The number of students increase it each year.",
+          "The number of students is increasing each year."
         ],
         "answer": "The number of students is increasing each year.",
         "explanation": "The head noun is the singular number, so use is. Compare: A number of students are absent, where a number of means several.",
@@ -380,9 +380,9 @@
         "type": "mcq",
         "question": "Choose the grammatically correct sentence.",
         "options": [
-          "Public transport plays an important role in a city.",
-          "Public transport plays important role in a city.",
           "Public transport plays a important role in a city.",
+          "Public transport plays important role in a city.",
+          "Public transport plays an important role in a city.",
           "Public transport play an important role in a city."
         ],
         "answer": "Public transport plays an important role in a city.",
@@ -394,10 +394,10 @@
         "type": "mcq",
         "question": "Choose the grammatically correct sentence.",
         "options": [
-          "The website provides many useful informations.",
+          "The website provides useful information.",
           "The website provide much useful information.",
-          "The website provides a useful information.",
-          "The website provides useful information."
+          "The website provides many useful informations.",
+          "The website provides a useful information."
         ],
         "answer": "The website provides useful information.",
         "explanation": "Information is uncountable in standard English: use useful information or a useful piece of information, not informations or a information.",
@@ -408,10 +408,10 @@
         "type": "mcq",
         "question": "The intended meaning is that the proportion was 20% in 2010 and 40% in 2020. Choose the correct sentence.",
         "options": [
-          "The proportion was twice as high in 2020 than in 2010.",
+          "The proportion was twice higher as in 2020 than in 2010.",
           "The proportion was double as high in 2020 as in 2010.",
-          "The proportion was twice as high in 2020 as in 2010.",
-          "The proportion was twice higher as in 2020 than in 2010."
+          "The proportion was twice as high in 2020 than in 2010.",
+          "The proportion was twice as high in 2020 as in 2010."
         ],
         "answer": "The proportion was twice as high in 2020 as in 2010.",
         "explanation": "Use twice as + adjective + as for this comparison. Forty percent is twice twenty percent.",
@@ -437,9 +437,9 @@
         "question": "Choose the grammatically correct sentence expressing a contrast.",
         "options": [
           "Whereas bus use fell, rail use increased.",
-          "Whereas bus use fell, but rail use increased.",
+          "Although bus use fell, but rail use increased.",
           "Despite bus use fell, rail use increased.",
-          "Although bus use fell, but rail use increased."
+          "Whereas bus use fell, but rail use increased."
         ],
         "answer": "Whereas bus use fell, rail use increased.",
         "explanation": "Whereas links two contrasting clauses. Do not add but to the same structure. Despite normally takes a noun phrase or an -ing form, or despite the fact that + clause.",
@@ -450,10 +450,10 @@
         "type": "mcq",
         "question": "The data show an association but do not establish a cause. Choose the grammatically correct sentence that preserves this caution.",
         "options": [
-          "The association proves that commuting causes stress.",
           "The association may suggests a relationship between commuting and stress.",
+          "The association suggesting a relationship between commuting and stress.",
           "The association may suggest a relationship between commuting and stress.",
-          "The association suggesting a relationship between commuting and stress."
+          "The association proves that commuting causes stress."
         ],
         "answer": "The association may suggest a relationship between commuting and stress.",
         "explanation": "May correctly keeps the claim cautious, and a modal verb takes the base form suggest. An association by itself does not justify the stronger causal claim in the first option.",
@@ -464,10 +464,10 @@
         "type": "mcq",
         "question": "The rate changed from 10% to 15%. Choose the grammatically correct sentence describing both endpoints.",
         "options": [
-          "The rate increased by 10% at 15%.",
-          "The rate increased from 10% to 15%.",
           "The rate increased of 10% for 15%.",
-          "The rate increased in 10% until 15%."
+          "The rate increased in 10% until 15%.",
+          "The rate increased from 10% to 15%.",
+          "The rate increased by 10% at 15%."
         ],
         "answer": "The rate increased from 10% to 15%.",
         "explanation": "Use from for the starting point and to for the ending point. The difference is five percentage points; do not confuse that with the endpoints.",
@@ -478,10 +478,10 @@
         "type": "mcq",
         "question": "Choose the grammatically correct sentence.",
         "options": [
-          "The programme aim to reduce waste, save energy and improve safety.",
+          "The programme aims to reduce waste, save energy and improve safety.",
           "The programme aims reduce waste, save energy and improve safety.",
           "The programme aims to reducing waste, saving energy and improving safety.",
-          "The programme aims to reduce waste, save energy and improve safety."
+          "The programme aim to reduce waste, save energy and improve safety."
         ],
         "answer": "The programme aims to reduce waste, save energy and improve safety.",
         "explanation": "The three coordinated verbs share to: to reduce, save and improve. Keep the forms parallel. Aim takes to + base verb in this structure.",
@@ -492,10 +492,10 @@
         "type": "mcq",
         "question": "Choose the grammatically correct sentence.",
         "options": [
-          "The city which population grew fastest built two hospitals.",
-          "The city whose its population grew fastest built two hospitals.",
+          "The city who population grew fastest built two hospitals.",
           "The city whose population grew fastest built two hospitals.",
-          "The city who population grew fastest built two hospitals."
+          "The city whose its population grew fastest built two hospitals.",
+          "The city which population grew fastest built two hospitals."
         ],
         "answer": "The city whose population grew fastest built two hospitals.",
         "explanation": "Whose expresses the relationship between the city and its population. It can refer to places or things as well as people. Do not add its after whose.",
