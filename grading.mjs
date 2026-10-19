@@ -1,8 +1,8 @@
 // Browser-side contracts for practice grading and an optional private service.
 // Access codes deliberately never enter saved submissions or assessment history.
 export const GRADING_SCOPES = Object.freeze(['writing_task','writing_fragment','speaking_audio','speaking_transcript','speaking_points']);
-export const MAX_AUDIO_SECONDS = 60;
-export const MAX_AUDIO_BYTES = 2000000;
+export const MAX_AUDIO_SECONDS = 120;
+export const MAX_AUDIO_BYTES = 4000000;
 const isObject = value => !!value && typeof value === 'object' && !Array.isArray(value);
 const text = (value, max, empty = false) => typeof value === 'string' && value.length <= max && (empty || value.trim().length > 0);
 const id = value => typeof value === 'string' && /^[A-Za-z0-9_-]{1,150}$/.test(value);
@@ -27,7 +27,7 @@ function validateSubmission(value, {stored = false} = {}) {
  if (value.scope !== 'speaking_audio' && !value.text.trim()) fail('Add your answer before submitting.');
  if (value.scope === 'speaking_audio') {
   const audio = value.audio;
-  if (!isObject(audio) || audio.format !== 'wav' || !finite(audio.duration,0.1,MAX_AUDIO_SECONDS)) fail('Record between a moment and 60 seconds of speech.');
+  if (!isObject(audio) || audio.format !== 'wav' || !finite(audio.duration,0.1,MAX_AUDIO_SECONDS)) fail('Record between a moment and 120 seconds of speech.');
   if (!stored || audio.data !== undefined) {
    if (!text(audio.data,Math.ceil(MAX_AUDIO_BYTES / 3) * 4) || !/^[A-Za-z0-9+/]+={0,2}$/.test(audio.data) || audio.data.length % 4 !== 0) fail('The recording is too large or has an unsupported format.');
   }
@@ -61,7 +61,7 @@ export function snapshotSubmission(submission) {
 }
 
 export function validateAssessment(report, submission) {
- if (!isObject(report) || report.version !== 1 || !id(report.id) || !id(report.submissionId) || !date(report.date) || !['OpenAI','Puter / OpenAI'].includes(report.provider) || !text(report.model,100) || report.rubricVersion !== 'IELTS-public-2023' || !GRADING_SCOPES.includes(report.scope) || report.provisional !== true || !['low','medium'].includes(report.confidence) || !band(report.estimatedBand) || !text(report.summary,6000)) fail();
+ if (!isObject(report) || report.version !== 1 || !id(report.id) || !id(report.submissionId) || !date(report.date) || !['OpenAI','Puter / OpenAI','Google Gemini'].includes(report.provider) || !text(report.model,100) || report.rubricVersion !== 'IELTS-public-2023' || !GRADING_SCOPES.includes(report.scope) || report.provisional !== true || !['low','medium'].includes(report.confidence) || !band(report.estimatedBand) || !text(report.summary,6000)) fail();
  if (submission) {
   validateSubmission(submission,{stored:true});
   if (report.submissionId !== submission.id || report.scope !== submission.scope) fail('This feedback belongs to a different answer. Please submit again.');
@@ -138,7 +138,7 @@ async function jsonResponse(response) {
  let value;
  try { value = await response.json(); } catch { fail('The grading service returned an unreadable response. Please retry.'); }
  if (!response.ok) {
-  const fallback = {401:'The access code was not accepted. Reconnect with the correct code.',403:'This app is not allowed to use that grading service.',413:'That recording is too large. Record up to 60 seconds.',429:'The grader is busy or its usage limit has been reached. Please try later.',503:'The grading service is not configured yet. Finish connecting it first.',504:'Grading took too long. Your answer is saved; please retry.'};
+  const fallback = {401:'The access code was not accepted. Reconnect with the correct code.',403:'This app is not allowed to use that grading service.',413:'That recording is too large. Record up to 120 seconds.',429:'The grader is busy or its usage limit has been reached. Please try later.',503:'The grading service is not configured yet. Finish connecting it first.',504:'Grading took too long. Your answer is saved; please retry.'};
   const message = value?.error?.message;
   throw new Error(text(message,500) ? message : fallback[response.status] || 'The grading service could not complete this attempt. Please retry.');
  }
@@ -161,7 +161,7 @@ export async function requestGrade(endpoint, accessCode, submission, {signal,fet
 
 /** PCM WAV is supported consistently by the server's audio-capable model. */
 export function encodeMonoWav(samples, sampleRate = 16000) {
- if (!(samples instanceof Float32Array) || !Number.isInteger(sampleRate) || sampleRate < 8000 || sampleRate > 48000 || !samples.length || samples.length / sampleRate > MAX_AUDIO_SECONDS || samples.length * 2 + 44 > MAX_AUDIO_BYTES) fail('Use a recording of up to 60 seconds.');
+ if (!(samples instanceof Float32Array) || !Number.isInteger(sampleRate) || sampleRate < 8000 || sampleRate > 48000 || !samples.length || samples.length / sampleRate > MAX_AUDIO_SECONDS || samples.length * 2 + 44 > MAX_AUDIO_BYTES) fail('Use a recording of up to 120 seconds.');
  const bytes = new Uint8Array(44 + samples.length * 2), view = new DataView(bytes.buffer);
  const ascii = (offset,value) => [...value].forEach((letter,index)=>view.setUint8(offset+index,letter.charCodeAt(0)));
  ascii(0,'RIFF'); view.setUint32(4,bytes.length-8,true); ascii(8,'WAVE'); ascii(12,'fmt '); view.setUint32(16,16,true); view.setUint16(20,1,true); view.setUint16(22,1,true); view.setUint32(24,sampleRate,true); view.setUint32(28,sampleRate*2,true); view.setUint16(32,2,true); view.setUint16(34,16,true); ascii(36,'data'); view.setUint32(40,samples.length*2,true);
@@ -173,7 +173,7 @@ export async function recordingToWav(blob, {AudioContext = globalThis.AudioConte
  const context = new AudioContext();
  try {
   const buffer = await context.decodeAudioData(await blob.arrayBuffer());
-  if (!finite(buffer.duration,0.1,MAX_AUDIO_SECONDS+0.25) || !buffer.numberOfChannels) fail('Record up to 60 seconds, then submit again.');
+  if (!finite(buffer.duration,0.1,MAX_AUDIO_SECONDS+0.25) || !buffer.numberOfChannels) fail('Record up to 120 seconds, then submit again.');
   const duration = Math.min(MAX_AUDIO_SECONDS,buffer.duration), length = Math.floor(duration*16000), mono = new Float32Array(length);
   // Mix channels and linearly resample. No recording is uploaded during conversion.
   for (let channel=0;channel<buffer.numberOfChannels;channel++) {

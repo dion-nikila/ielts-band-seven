@@ -109,11 +109,13 @@ test('connection checks reject incompatible services and API failures remain act
  await assert.rejects(requestGrade(endpoint,'code',s,{fetch:async()=>({...json({}),headers:new Headers({'content-type':'text/html'})})}),/valid response/);
 });
 
-test('a minute of 16 kHz mono PCM stays under the 2MB audio and 4MB request limits',()=>{
- const bytes=encodeMonoWav(new Float32Array(16000*60)),view=new DataView(bytes.buffer);
- assert.equal(bytes.length,1920044);assert.equal(view.getUint32(24,true),16000);assert.equal(view.getUint16(22,true),1);assert.equal(view.getUint16(34,true),16);
- const body=JSON.stringify({submission:{audio:{data:Buffer.from(bytes).toString('base64')}}});assert.ok(Buffer.byteLength(body)<4000000);
- assert.throws(()=>encodeMonoWav(new Float32Array(16000*61)),/up to 60/);
+test('two minutes of 16 kHz mono PCM stays under 4MB audio and 6MB request limits',()=>{
+ const bytes=encodeMonoWav(new Float32Array(16000*120)),view=new DataView(bytes.buffer);
+ assert.equal(bytes.length,3840044);assert.ok(bytes.length<4000000);assert.equal(view.getUint32(24,true),16000);assert.equal(view.getUint16(22,true),1);assert.equal(view.getUint16(34,true),16);
+ const body=JSON.stringify({submission:{audio:{data:Buffer.from(bytes).toString('base64')}}});assert.ok(Buffer.byteLength(body)<6000000);
+ assert.throws(()=>encodeMonoWav(new Float32Array(16000*121)),/up to 120/);
+ // Duration alone is not the limit: 120 seconds at 48 kHz would exceed 4 MB.
+ assert.throws(()=>encodeMonoWav(new Float32Array(48000*120),48000),/up to 120/);
 });
 
 test('recording conversion mixes stereo, downsamples and closes its temporary audio context',async()=>{
@@ -129,6 +131,6 @@ test('all learner, provider and report text is escaped when rendering feedback o
  report.summary='<script>alert(1)</script>';report.model='<svg onload=alert(1)>';
  const html=renderAssessment(report,{submission:s});assert.doesNotMatch(html,/<script>|<img src=x|<svg onload/);assert.match(html,/&lt;script&gt;/);assert.match(html,/&lt;img/);
  assert.doesNotMatch(renderConnection({connected:true,username:'<script>x</script>',error:'<img>'}),/<script>|<img>/);
- assert.match(renderConnection(),/data-action="connect-grader"/);assert.match(renderConnection(),/Uses your Puter allowance/);
+ assert.match(renderConnection(),/data-action="connect-grader"/);assert.match(renderConnection(),/Google free-tier quotas/);
  assert.match(renderAssessmentHistory([{submission:s,assessment:report}]),/view-assessment/);
 });
