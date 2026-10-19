@@ -28,7 +28,7 @@ async function grade(id, prompt) {
   await engine.resetChat();
   const response = await engine.chat.completions.create({
     messages: prompt.messages,
-    max_tokens: 2200,
+    max_tokens: 850,
     temperature: 0.2,
     response_format: { type: 'json_object', schema: JSON.stringify(prompt.schema) },
     extra_body: { enable_thinking: false },
@@ -36,7 +36,7 @@ async function grade(id, prompt) {
   });
   let text='',finishReason=null,lastStage='';
   for await(const chunk of response){const choice=chunk?.choices?.[0];if(typeof choice?.delta?.content==='string')text+=choice.delta.content;if(choice?.finish_reason)finishReason=choice.finish_reason;
-    const stage=text.includes('"improvedExcerpt"')?'Finishing and validating your feedback.':text.includes('"corrections"')?'Checking suggested changes to your wording.':text.includes('"priorities"')?'Preparing your next practice exercise.':text.includes('"criteria"')?'Checking the task and your language.':'';
+    const stage=text.includes('"successCheck"')?'Finishing and validating your feedback.':text.includes('"exercise"')?'Preparing your next practice exercise.':text.includes('"reason"')?'Explaining the proposed language change.':text.includes('"revision"')?'Drafting one sentence alternative.':text.includes('"observation"')?'Inspecting one source sentence.':'';
     if(stage&&stage!==lastStage){lastStage=stage;send(id,'stage',{message:stage});}
   }
   if (finishReason !== 'stop' || !text.trim()) { send(id, 'error', { code: 'invalid_local_report', message: 'The local model could not finish a complete report. Your answer is available; try a shorter response.' }); return; }

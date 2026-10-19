@@ -1,5 +1,5 @@
-import {wordCount,dateKey} from './core.mjs?v=20261019-local5';
-import {findLanguageChecks} from './language-checks.mjs?v=20261019-local5';
+import {wordCount,dateKey} from './core.mjs?v=20261019-local6';
+import {findLanguageChecks} from './language-checks.mjs?v=20261019-local6';
 export function ensureLearning(state){if(!state.learning)state.learning={lessons:{},current:null,speaking:[],practice:null};if(state.learning.practice===undefined)state.learning.practice=null;return state.learning;}
 export function lessonRecord(state,id){const l=ensureLearning(state);if(!l.lessons[id])l.lessons[id]={step:0,selected:null,submitted:false,correct:false,completedAt:null};return l.lessons[id];}
 export function normaliseAnswer(value){return String(value??'').normalize('NFKC').trim().toLowerCase().replace(/[’‘]/g,"'").replace(/[.,!?;]+$/g,'').replace(/\s+/g,' ');}
