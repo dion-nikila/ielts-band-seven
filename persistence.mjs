@@ -1,6 +1,6 @@
-import {emptyState,validateState} from './core.mjs?v=20261019-local6';
-import {safeLearning} from './coach.mjs?v=20261019-local6';
-import {safeAssessments} from './grading.mjs?v=20261019-local6';
+import {emptyState,validateState} from './core.mjs?v=20261019-local7';
+import {safeLearning} from './coach.mjs?v=20261019-local7';
+import {safeAssessments} from './grading.mjs?v=20261019-local7';
 
 const object=value=>!!value&&typeof value==='object'&&!Array.isArray(value);
 const safeAnswer=(key,value)=>/^p[123]-\d{1,3}$/.test(key)&&object(value)&&['speaking_points','speaking_transcript'].includes(value.mode)&&typeof value.text==='string'&&value.text.length<=20000;
