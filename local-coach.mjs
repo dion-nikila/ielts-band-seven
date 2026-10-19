@@ -1,7 +1,7 @@
-import { createSubmission, validateAssessment } from './grading.mjs?v=20261019-local7';
-import { criteriaFor } from './grader-contract.mjs?v=20261019-local7';
-import {findLanguageChecks} from './language-checks.mjs?v=20261019-local7';
-import { normalizeAssessment } from './report-normalizer.mjs?v=20261019-local7';
+import { createSubmission, validateAssessment } from './grading.mjs?v=20261019-final';
+import { criteriaFor } from './grader-contract.mjs?v=20261019-final';
+import {findLanguageChecks} from './language-checks.mjs?v=20261019-final';
+import { normalizeAssessment } from './report-normalizer.mjs?v=20261019-final';
 
 export const LOCAL_COACH_PROVIDER = 'On-device AI';
 export const LOCAL_COACH_DOWNLOAD_BYTES = 968001536;
@@ -26,6 +26,15 @@ function sourceSentences(text){
  return spans;
 }
 const reviewPrompts={task_response:'Check that your position answers every part of the task and that each main claim has relevant support.',task_achievement:'Check every fact against the supplied data and make sure the overview selects the main trends or contrasts.',coherence_cohesion:'Check each paragraph’s main claim and how its explanation connects to the next point.',lexical_resource:'Check whether each word expresses your intended meaning naturally and precisely.',grammatical_range_accuracy:'Check sentence boundaries, agreement and verb forms. A clean limited pattern check does not prove error-free writing.',relevance_development:'Check that the point answers the question and is developed with a reason or example.',organisation:'Put the main idea first, then add a supporting reason or example.',language_options:'Choose natural phrases you can use again in a fresh answer.',fluency_coherence:'Spoken fluency cannot be assessed from text. Listen back to the recording or ask a qualified tutor.',pronunciation:'Pronunciation cannot be assessed from text. Listen back to the recording or ask a qualified tutor.'};
+/** Immediate local review: limited explicit rules and self-review prompts.
+ * This does not infer task quality, language proficiency or any IELTS band. */
+export function createPatternAssessment(value){
+ const submission=createSubmission(value);if(submission.scope==='speaking_audio')throw error('transcript_required','Check a transcript before reviewing the language.');
+ const checks=findLanguageChecks(submission.text),unique=[...new Map(checks.map(c=>[c.original,c])).values()],criterion=submission.scope==='speaking_points'?'language_options':'grammatical_range_accuracy';
+ const taskPractice=submission.scope.startsWith('writing_')?(submission.taskType===1?'Underline the overview, then check each number and comparison against the supplied data.':'Underline your opinion sentence. Label the claim, explanation and example in each body paragraph. Check that every part of the question is answered.'):'Choose one point. Add a reason and a concrete example, then record a fresh answer without reading a script.';
+ return validateAssessment({version:1,id:globalThis.crypto.randomUUID(),submissionId:submission.id,date:new Date().toISOString(),provider:'Built-in checks',model:'limited-language-patterns-v1',rubricVersion:'IELTS-public-2023',scope:submission.scope,provisional:true,estimatedBand:null,confidence:'low',summary:checks.length?'The limited checks flagged '+checks.length+' language-pattern occurrence'+(checks.length===1?'':'s')+' to inspect. Start with the quoted changes, then do the short exercise.':'No covered language pattern was flagged. This does not prove the answer is correct or complete. Use the review prompts and a fresh practice task to check it further.',criteria:criteriaFor(submission).map(([id,label])=>({id,label,band:null,why:id===criterion&&checks.length?'Limited pattern checks: '+unique.slice(0,3).map(c=>c.why).join(' ')+' Other errors may be missed.':reviewPrompts[id],evidence:id===criterion?unique.slice(0,3).map(c=>({quote:c.original,timestampSeconds:null})):[]})),strengths:[],priorities:checks.length?[{criterion,action:'Inspect and correct “'+checks[0].original+'”.',practice:checks[0].exercise,successCheck:checks[0].successCheck}]:[{criterion:criteriaFor(submission)[0][0],action:'Check the response against the exact task.',practice:taskPractice,successCheck:'You can point to the sentence or example that answers each part of the task; revise any part you cannot locate.'}],corrections:unique.slice(0,6).map(c=>({original:c.original,replacement:c.replacement,why:'Built-in pattern check: '+c.why})),improvedExcerpt:'',limitations:['Limited explicit pattern checks and prompts for your own review; not AI grading or a complete grammar check.','No IELTS bands, pronunciation or spoken-fluency scores are inferred. Task fulfilment and factual accuracy still need your review or qualified feedback.','The review was prepared in this browser without uploading the answer.']},submission);
+}
+
 /** A small local model is used for one specific sentence-level suggestion,
  * never for a holistic IELTS judgement. Source IDs make quotations exact. */
 export function prepareLocalPrompt(value){
@@ -37,6 +46,7 @@ export function prepareLocalPrompt(value){
 }
 export function localAssessmentFromText(text,value,model){
  const submission=submissionForLocal(value);
+ if(findLanguageChecks(submission.text).length)return createPatternAssessment(submission);
  if(!LOCAL_COACH_MODELS.includes(model)||typeof text!=='string'||text.length>16000)throw invalid();
  let raw;try{raw=JSON.parse(text.trim().replace(/^<think>\s*<\/think>\s*/i,'').replace(/^```(?:json)?\s*\n?([\s\S]*?)\n?```$/i,'$1'));}catch{throw invalid();}
  const fields=['sourceIndex','criterion','observation','revision','reason','exercise','successCheck'],sentences=sourceSentences(submission.text),eligible=prepareLocalPrompt(submission).schema.properties.criterion.enum;
@@ -45,22 +55,14 @@ export function localAssessmentFromText(text,value,model){
  const unchanged=original===raw.revision.trim();
  if(!unchanged&&(raw.revision.trim().startsWith(original)||/\b(?:the original sentence|the plural form|grammatically correct|the revision preserves)\b/i.test(raw.revision)))throw invalid();
  try{
-  const report=normalizeAssessment({estimatedBand:null,confidence:'low',summary:'Sentence-focused coaching for this answer. Compare the quoted suggestion with your intended meaning, apply one useful change, then try the exercise. Other criteria below are review prompts, not model assessments.',criteria:criteriaFor(submission).map(([id,label])=>({id,label,band:null,why:id===raw.criterion?(unchanged?'No change was identified for this sentence. This does not establish that it is error-free.':raw.observation):reviewPrompts[id],evidence:id===raw.criterion?[{quote:original,timestampSeconds:null}]:[]})),strengths:[],priorities:[{criterion:raw.criterion,action:unchanged?'Practise two fresh variations of the quoted sentence.':raw.observation,practice:raw.exercise,successCheck:raw.successCheck}],corrections:unchanged?[]:[{original,replacement:raw.revision,why:'Optional AI language suggestion: '+raw.reason+' Keep it only if it preserves your meaning.'}],improvedExcerpt:'',limitations:['Sentence-focused coaching from a small local model, not a validated IELTS examiner. No IELTS bands were estimated.','Unselected criteria are prompts for your own review; the model has not assessed them. Its one language suggestion can still be wrong.','Your text was processed on this device. Downloading model files does not upload your answer.']},submission,{provider:LOCAL_COACH_PROVIDER,model});
-  const checks=findLanguageChecks(submission.text),criterion=submission.scope==='speaking_points'?'language_options':'grammatical_range_accuracy';
-  if(checks.length){
-   const unique=[...new Map(checks.map(c=>[c.original,c])).values()],target=report.criteria.find(c=>c.id===criterion);
-   if(target){target.why='Built-in pattern checks flagged '+checks.length+' occurrence'+(checks.length===1?'':'s')+' to inspect. '+unique.slice(0,3).map(c=>c.why).join(' ')+' These checks cover only a few patterns, not all grammar.';target.evidence=unique.slice(0,3).map(c=>({quote:c.original,timestampSeconds:null}));}
-   report.corrections=[...unique.map(c=>({original:c.original,replacement:c.replacement,why:'Built-in pattern check: '+c.why})),...report.corrections.filter(c=>!unique.some(x=>x.original===c.original))].slice(0,6);
-   report.priorities=[{criterion,action:'Inspect and correct “'+checks[0].original+'”.',practice:checks[0].exercise,successCheck:checks[0].successCheck},...report.priorities].slice(0,2);
-   report.limitations.push('Corrections labelled Built-in pattern check come from limited local rules and can miss other errors. They are separate from the model’s optional suggestion.');
-  }
+  const report=normalizeAssessment({estimatedBand:null,confidence:'low',summary:'Sentence-focused coaching for this answer. Compare the quoted suggestion with your intended meaning, apply one useful change, then try the exercise. Other criteria below are review prompts, not model assessments.',criteria:criteriaFor(submission).map(([id,label])=>({id,label,band:null,why:id===raw.criterion?(unchanged?'No alternative was suggested for this sentence. This does not establish that it is error-free.':'Compare the optional alternative below with this exact source sentence. It is a phrasing suggestion, not a grammar judgement.'):reviewPrompts[id],evidence:id===raw.criterion?[{quote:original,timestampSeconds:null}]:[]})),strengths:[],priorities:[{criterion:raw.criterion,action:'Practise two fresh variations of the quoted sentence.',practice:'Write two sentences using a similar structure with different ideas. Compare them with official examples or qualified feedback.',successCheck:'Both new sentences preserve your intended meaning and form complete, natural sentences. Do not copy the sample mechanically.'}],corrections:unchanged?[]:[{original,replacement:raw.revision,why:'Optional AI phrasing, not a verified correction. It may be unsuitable or change meaning. Keep it only if it fits your intended message.'}],improvedExcerpt:'',limitations:['Sentence-focused coaching from a small local model, not a validated IELTS examiner. No IELTS bands were estimated.','Unselected criteria are prompts for your own review; the model has not assessed them. Its one language suggestion can still be wrong.','Your text was processed on this device. Downloading model files does not upload your answer.']},submission,{provider:LOCAL_COACH_PROVIDER,model});
   return validateAssessment(report,submission);
  }catch{throw invalid();}
 }
 
 /** A worker isolates local computation. Cancellation terminates it and releases
  * the model; model files may remain in the browser cache for the next load. */
-export function createLocalCoach({ Worker: WorkerClass = globalThis.Worker, navigator: device = globalThis.navigator, workerUrl = new URL('./local-coach-worker.mjs?v=20261019-local7', import.meta.url), loadTimeoutMs = 900000, gradeTimeoutMs = 180000 } = {}) {
+export function createLocalCoach({ Worker: WorkerClass = globalThis.Worker, navigator: device = globalThis.navigator, workerUrl = new URL('./local-coach-worker.mjs?v=20261019-final', import.meta.url), loadTimeoutMs = 900000, gradeTimeoutMs = 180000 } = {}) {
   let worker = null, sequence = 0, loadPromise = null;
   let status = { phase: typeof WorkerClass !== 'function' || !device?.gpu ? 'unsupported' : 'idle', model: null, progress: 0, error: null, downloadBytes: LOCAL_COACH_DOWNLOAD_BYTES };
   const pending = new Map(), listeners = new Set();
@@ -133,6 +135,7 @@ export function createLocalCoach({ Worker: WorkerClass = globalThis.Worker, navi
   }
   async function grade(input, options = {}) {
     const submission = submissionForLocal(input);
+    if(findLanguageChecks(submission.text).length)return createPatternAssessment(submission);
     if (options.signal?.aborted) throw cancelled();
     if (status.phase === 'grading') throw error('busy', 'The local coach is already reviewing an answer. Wait for it to finish or cancel it.');
     if (!worker || status.phase !== 'ready') throw error('model_not_loaded', 'Load the on-device coach before requesting AI feedback.');

@@ -50,3 +50,5 @@ test('local reports have no numeric score presentation and cannot claim an audio
  const html=renderAssessment(record('My actual words.',{provider:'On-device AI'}));
  assert.match(html,/Coaching only · no band scores/);assert.match(html,/cannot reliably assign IELTS bands/);assert.match(html,/does not assess the sound/);assert.doesNotMatch(html,/score-big|Not scored/);
 });
+
+test('built-in reviews are labelled as limited pattern checks rather than AI assessment',()=>{const html=renderAssessment(record('My words.',{provider:'Built-in checks'}));assert.match(html,/Limited pattern review/);assert.match(html,/not a full language assessment/);assert.doesNotMatch(html,/This small on-device model/);});

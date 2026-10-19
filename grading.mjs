@@ -61,8 +61,8 @@ export function snapshotSubmission(submission) {
 }
 
 export function validateAssessment(report, submission) {
- if (!isObject(report) || report.version !== 1 || !id(report.id) || !id(report.submissionId) || !date(report.date) || !['OpenAI','Puter / OpenAI','Google Gemini','On-device AI'].includes(report.provider) || !text(report.model,100) || report.rubricVersion !== 'IELTS-public-2023' || !GRADING_SCOPES.includes(report.scope) || report.provisional !== true || !['low','medium'].includes(report.confidence) || !band(report.estimatedBand) || !text(report.summary,6000)) fail();
- if (report.provider === 'On-device AI' && (report.estimatedBand !== null || report.confidence !== 'low')) fail('On-device coaching cannot establish an IELTS band.');
+ if (!isObject(report) || report.version !== 1 || !id(report.id) || !id(report.submissionId) || !date(report.date) || !['OpenAI','Puter / OpenAI','Google Gemini','On-device AI','Built-in checks'].includes(report.provider) || !text(report.model,100) || report.rubricVersion !== 'IELTS-public-2023' || !GRADING_SCOPES.includes(report.scope) || report.provisional !== true || !['low','medium'].includes(report.confidence) || !band(report.estimatedBand) || !text(report.summary,6000)) fail();
+ if (['On-device AI','Built-in checks'].includes(report.provider) && (report.estimatedBand !== null || report.confidence !== 'low')) fail('On-device coaching cannot establish an IELTS band.');
  if (submission) {
   validateSubmission(submission,{stored:true});
   if (report.submissionId !== submission.id || report.scope !== submission.scope) fail('This feedback belongs to a different answer. Please submit again.');
@@ -71,7 +71,7 @@ export function validateAssessment(report, submission) {
  const expected = criteriaIds(report.scope,writingTaskType);
  if (!Array.isArray(report.criteria) || report.criteria.length !== expected.length || new Set(report.criteria.map(c=>c?.id)).size !== expected.length) fail();
  for (const criterion of report.criteria) {
-  if (!isObject(criterion) || !expected.includes(criterion.id) || !text(criterion.label,150) || !band(criterion.band) || (report.provider === 'On-device AI' || unsupportedBand(report.scope,criterion.id)) && criterion.band !== null || !text(criterion.why,6000) || !Array.isArray(criterion.evidence) || criterion.evidence.length > 12) fail();
+  if (!isObject(criterion) || !expected.includes(criterion.id) || !text(criterion.label,150) || !band(criterion.band) || (['On-device AI','Built-in checks'].includes(report.provider) || unsupportedBand(report.scope,criterion.id)) && criterion.band !== null || !text(criterion.why,6000) || !Array.isArray(criterion.evidence) || criterion.evidence.length > 12) fail();
   for (const evidence of criterion.evidence) {
    if (!isObject(evidence) || !text(evidence.quote,2000) || !(evidence.timestampSeconds === null || report.scope === 'speaking_audio' && finite(evidence.timestampSeconds,0,submission?.audio?.duration ?? MAX_AUDIO_SECONDS))) fail();
    // Text evidence must be traceable to the submitted answer, not invented by the model.

@@ -51,7 +51,7 @@ export async function transcribeLocal(wavAudio,{onStage,onProgress,signal,Worker
  const decoded=decodeLocalWav(wavAudio);
  if(typeof WorkerClass!=='function')throw failure('This browser cannot run local speech recognition. Type a checked transcript instead.','worker_unavailable');
  const id=globalThis.crypto?.randomUUID?.()||`local-asr-${Date.now()}-${Math.random().toString(36).slice(2)}`;
- let worker;try{worker=new WorkerClass(new URL('./local-transcriber-worker.mjs?v=20261019-local7',import.meta.url),{type:'module',name:'ielts-local-transcription'});}catch{throw failure('The local speech worker could not start. Try a current browser or type your transcript.','worker_unavailable');}
+ let worker;try{worker=new WorkerClass(new URL('./local-transcriber-worker.mjs?v=20261019-final',import.meta.url),{type:'module',name:'ielts-local-transcription'});}catch{throw failure('The local speech worker could not start. Try a current browser or type your transcript.','worker_unavailable');}
  return new Promise((resolve,reject)=>{
   let settled=false,timer;activeJob={id};
   function cleanup(){clearTimeout(timer);signal?.removeEventListener('abort',abort);worker.onmessage=null;worker.onerror=null;worker.onmessageerror=null;try{worker.terminate();}catch{}if(activeJob?.id===id)activeJob=null;}

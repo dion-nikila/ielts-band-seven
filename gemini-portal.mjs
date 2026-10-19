@@ -1,4 +1,4 @@
-import {validateAssessment} from './grading.mjs?v=20261019-local7';
+import {validateAssessment} from './grading.mjs?v=20261019-final';
 export const GEMINI_GRADER_URL='https://ielts-gemini-grader-dion.hf5r5r9j8h.chatgpt.site/';
 const CHANNEL='ielts-gemini-v1';
 function error(message,code='connection_error',retryAfter=null){return Object.assign(new Error(message),{code,retryAfter});}
