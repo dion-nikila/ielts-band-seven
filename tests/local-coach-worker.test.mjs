@@ -1,0 +1,5 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {initializeLocalEngine} from '../local-coach-worker.mjs';
+test('unsupported GPUs fail before importing or downloading a model',async()=>{let imports=0;await assert.rejects(initializeLocalEngine({device:{gpu:{requestAdapter:async()=>null}},loadRuntime:()=>{imports++;}}),e=>e.code==='unsupported_device');assert.equal(imports,0);});
+test('the pinned runtime receives its recognized IndexedDB cache option and matching GPU model',async()=>{for(const f16 of [true,false]){const engine={},calls=[];const result=await initializeLocalEngine({device:{gpu:{requestAdapter:async()=>({features:new Set(f16?['shader-f16']:[])})}},loadRuntime:async()=>({prebuiltAppConfig:{cacheBackend:'cache',model_list:[{model_id:'fixture'}]},CreateMLCEngine:async(...args)=>{calls.push(args);return engine;}})});assert.equal(result.engine,engine);assert.equal(result.model,f16?'Qwen3-1.7B-q4f16_1-MLC':'Qwen3-1.7B-q4f32_1-MLC');assert.equal(calls[0][1].appConfig.cacheBackend,'indexeddb');assert.equal('useIndexedDBCache' in calls[0][1].appConfig,false);}});

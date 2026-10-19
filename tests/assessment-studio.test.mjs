@@ -32,15 +32,21 @@ test('feedback leads with actionable priorities and uses scope-specific no-score
  assert.match(html,/Talking points are preparation/);assert.doesNotMatch(html,/A transcript can show/);
  assert.match(renderAssessment(record('A paragraph.',{scope:'writing_fragment'})),/A paragraph does not cover a full Writing task/);
 });
-test('connection has a private setup action and no key-entry field or intermediary account',()=>{
+test('connection enables local inference with explicit download and no key or login',()=>{
  const html=renderConnection();
- assert.match(html,/data-action="connect-grader"/);assert.match(html,/Open private grader/);
- assert.match(html,/free-tier quotas/);assert.doesNotMatch(html,/Puter|type="password"|grader-url/);
+ assert.match(html,/data-action="connect-grader"/);assert.match(html,/Enable on-device AI/);
+ assert.match(html,/1.1 GB/);assert.match(html,/No accounts or keys/);assert.match(html,/WebGPU/);assert.doesNotMatch(html,/Puter|type="password"|grader-url/);
 });
 test('studio errors preserve available work without falsely claiming persistence',()=>{
- const studio=createAssessmentStudio({getState:()=>({assessments:[]}),esc,head:()=>'',button:(action,label)=>`<button data-action="${action}">${label}</button>`,link:(url,label)=>`<a href="${url}">${label}</a>`,connected:()=>false,job:()=>null,error:()=>({code:'quota',message:'Wait before retrying.',retryAfter:30}),storageAvailable:()=>false});
+ const studio=createAssessmentStudio({getState:()=>({assessments:[]}),esc,head:()=>'',button:(action,label)=>`<button data-action="${action}">${label}</button>`,link:(url,label)=>`<a href="${url}">${label}</a>`,connected:()=>false,job:()=>null,error:()=>({code:'timeout',message:'The review took too long.'}),storageAvailable:()=>false});
  const html=studio.hub();
- assert.match(html,/free quota is temporarily unavailable/);assert.match(html,/about 30 seconds/);assert.match(html,/answer remains available/);assert.match(html,/Download it before closing/);
+ assert.match(html,/local review took too long/);assert.match(html,/answer remains available/);assert.match(html,/Download it before closing/);
  assert.doesNotMatch(html,/answer is still saved/);
- assert.match(html,/data-action="copy-grading-request"/);assert.match(html,/data-action="import-grade"/);
+ assert.doesNotMatch(html,/data-action="copy-grading-request"|Open private grader/);assert.match(html,/data-action="import-grade"/);
+});
+
+
+test('local reports have no numeric score presentation and cannot claim an audio assessment',()=>{
+ const html=renderAssessment(record('My actual words.',{provider:'On-device AI'}));
+ assert.match(html,/Coaching only · no band scores/);assert.match(html,/cannot reliably assign IELTS bands/);assert.match(html,/does not assess the sound/);assert.doesNotMatch(html,/score-big|Not scored/);
 });

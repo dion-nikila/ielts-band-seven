@@ -1,5 +1,5 @@
-import {createSubmission,validateAssessment} from './grading.mjs?v=20261019-2';
-import {criteriaFor,RUBRIC_VERSION} from './grader-contract.mjs?v=20261019-2';
+import {createSubmission,validateAssessment} from './grading.mjs?v=20261019-local3';
+import {criteriaFor,RUBRIC_VERSION} from './grader-contract.mjs?v=20261019-local3';
 
 const object=value=>!!value&&typeof value==='object'&&!Array.isArray(value);
 const validBand=value=>value===null||typeof value==='number'&&Number.isFinite(value)&&value>=0&&value<=9&&Number.isInteger(value*2);

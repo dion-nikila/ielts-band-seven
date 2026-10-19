@@ -1,36 +1,35 @@
 # Band Nine — IELTS Prep Lab
 
-A guided IELTS Academic study app hosted on [GitHub Pages](https://dion-nikila.github.io/ielts-band-seven/), with direct Google Gemini feedback through a private companion grader.
+A free IELTS Academic study app on [GitHub Pages](https://dion-nikila.github.io/ielts-band-seven/). The study app and its on-device coaching need no account, API key or paid service.
 
-## Learning flow
+## Practice and feedback
 
-Start with Your next session: learn a technique, check understanding, try its exercise, then review feedback and continue.
+- Ten guided lessons, worked examples and matching YouTube videos.
+- Six Reading sets, three Listening sets with playable audio, and a language repair set: 82 original practice questions.
+- Writing drafts, quick pattern checks, optional local AI coaching, quoted corrections and revision comparisons.
+- Speaking recording and playback, optional local transcription, then coaching on a checked transcript or talking points.
+- Band 9 goals in every skill, advanced practice blocks, mistake review and fresh full-mock tracking.
 
-- 10 guided lessons with original worked examples and matching YouTube videos.
-- 6 original Reading sets, 3 Listening sets with playable audio, and a language repair set: 82 practice questions.
-- Writing feedback against all four criteria, with quoted evidence, corrections, priorities and targeted practice. Every report stays linked to its exact submitted answer.
-- Speaking audio assessment of an actual recorded or uploaded sample, alongside separate talking-point coaching and checked-transcript language feedback.
-- Band 9 goals for every skill, six advanced practice blocks, annotated examples and revision comparisons. Unchanged answer text is not treated as evidence of progress.
-- First-attempt/repeat separation, error review and externally assessed mock-score tracking.
+## Enable local AI
 
-## Connect Gemini
+Choose **Enable on-device AI** in Writing or Speaking. It explicitly downloads the public Qwen3 1.7B model (about 968 MB of weights, roughly 1.1 GB with runtime files) into browser cache. It needs WebGPU and sufficient memory; a current desktop Chrome or Edge browser is recommended. The app does not download the model on startup. Unload AI releases its memory; downloaded files may remain cached. Reloading the page requires opening the cached model again. Cache eviction may require another download.
 
-Choose **Open private grader** in Writing or Speaking. In the [private companion window](https://ielts-gemini-grader-dion.hf5r5r9j8h.chatgpt.site/), sign in if asked and add a Google AI Studio API key once. Enter the key only in that private setup, never in chat, GitHub, a submitted answer or an app backup. The public GitHub Pages app receives grading reports, not the key. The study link stays the same and changing the provider does not require resetting browser data.
+Your submitted text is processed in a Web Worker on the device, without a remote inference API. Model files come from public Hugging Face, jsDelivr and the official MLC model library. No student answer is included in those download requests. The model is a small, uncalibrated coach: it gives suggestions and exercises, **not IELTS bands**. Every quotation must match the submitted answer; unsupported quotations are removed and disclosed. Review corrections carefully because suggestions can still be wrong.
 
-The integration uses Google's available free-tier quota. Availability and rate limits depend on the model, project and region. There is no automatic switch to a paid provider or purchase of a quota upgrade. A key attached to a billing-enabled Google project follows that project's billing configuration, so use a free-tier project if you want free-tier-only access.
+Lessons, quick language checks, model answers and progress tracking remain usable without the AI model. The site needs an initial network connection for its practice library; this is not a fully offline-installed application.
 
-A submission sends its question and answer, or the actual audio sample, to Google Gemini through the companion. Google may use unpaid-tier submissions and responses to improve its products; regional and billing-related exceptions are described in its terms. Keep personal or sensitive details out of practice submissions.
+## Speaking
 
-## Saved work and grading limits
+Record up to two minutes or choose an audio file. **Make a transcript on this device** downloads the pinned Whisper Tiny English model and runtime on first use (about 70 MB). It uses a local CPU worker, with no recording upload. Listen back and correct the editable transcript. Choosing **I checked this — use transcript** replaces that question's typed answer; reviewing it is a separate step. No pronunciation, spoken fluency or Speaking band is inferred from a transcript. Audio recognition can be inaccurate, especially with background noise, accents or silence.
 
-Drafts, notes, progress and feedback history stay in this browser on this device. They do not automatically sync. Existing v1 data and valid backups remain compatible. Export a backup in Settings regularly; clearing browser data can erase the local copy. Audio stays in the current tab and must be downloaded separately. Assessment history retains recording duration metadata, not the audio itself.
+## Saved work and measurement
 
-AI reports are provisional practice estimates, not official or independently calibrated IELTS results. A single Writing task is not the weighted Writing section. Paragraphs and talking points receive no band. A checked transcript can support vocabulary and grammar feedback but cannot establish pronunciation, spoken fluency or an overall Speaking band. Audio can support provisional estimates from what is audible in that particular sample; it is not the full three-part Speaking test. Feedback on revised answers remains separate from fresh full-mock evidence.
+Drafts, notes, progress and feedback stay in this browser on this device. They do not automatically sync. Existing v1 backups and valid earlier AI reports remain compatible. Earlier provider estimates retain their original labels; they are not relabelled as local results. Export a backup regularly. Clearing browser data can erase both work and model caches. Audio stays only in the current tab and must be downloaded separately.
 
-Listening clips use computer-generated English voices reading original scripts. They supplement official recordings. Original practice and self-assessment do not establish an official IELTS band.
+Measure bands using fresh full tests, their answer keys and qualified assessment. Mini drills show item accuracy; repeated answers and AI report variation do not establish progress or a band. Listening clips use computer-generated voices reading original scripts, alongside links to official recordings. The app has not been independently validated as an IELTS intervention.
 
-## Checks and references
+## Development
 
-Run `node --test tests/*.test.mjs`. Transport and provider-contract tests use explicit stubs; they do not create an account, submit a real API key or consume model quota. A real grading call requires the user's private companion setup and available Gemini quota.
+Run `node --test tests/*.test.mjs`. Worker lifecycle and report tests use explicit stubs; they never fabricate a successful live model run. Browser checks separately establish supported startup and actual inference where available. All browser module URLs carry a release version to prevent mixing cached contracts. The old cloud adapters remain unused for compatibility/reference; the active app does not open a private grader or request a cloud key.
 
-Google references: [API key setup](https://ai.google.dev/gemini-api/docs/api-key), [free-tier pricing](https://ai.google.dev/gemini-api/docs/pricing), [rate limits](https://ai.google.dev/gemini-api/docs/rate-limits), and [data terms](https://ai.google.dev/gemini-api/terms). IELTS sources are in `band-nine.mjs` and in the app.
+References: [WebLLM](https://webllm.mlc.ai/docs/), [Qwen3 1.7B model](https://huggingface.co/mlc-ai/Qwen3-1.7B-q4f16_1-MLC), [Transformers.js](https://huggingface.co/docs/transformers.js), [Whisper Tiny English](https://huggingface.co/Xenova/whisper-tiny.en). Official IELTS sources are linked in the app.

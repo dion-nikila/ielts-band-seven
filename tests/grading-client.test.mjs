@@ -131,6 +131,6 @@ test('all learner, provider and report text is escaped when rendering feedback o
  report.summary='<script>alert(1)</script>';report.model='<svg onload=alert(1)>';
  const html=renderAssessment(report,{submission:s});assert.doesNotMatch(html,/<script>|<img src=x|<svg onload/);assert.match(html,/&lt;script&gt;/);assert.match(html,/&lt;img/);
  assert.doesNotMatch(renderConnection({connected:true,username:'<script>x</script>',error:'<img>'}),/<script>|<img>/);
- assert.match(renderConnection(),/data-action="connect-grader"/);assert.match(renderConnection(),/Google free-tier quotas/);
+ assert.match(renderConnection(),/data-action="connect-grader"/);assert.match(renderConnection(),/No accounts or keys/);
  assert.match(renderAssessmentHistory([{submission:s,assessment:report}]),/view-assessment/);
 });
