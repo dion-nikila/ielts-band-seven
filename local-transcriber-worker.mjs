@@ -1,4 +1,4 @@
-import {LOCAL_ASR_MODEL,LOCAL_ASR_REVISION,LOCAL_ASR_RUNTIME,LOCAL_ASR_WASM_PATH} from './local-transcriber.mjs?v=20261019-local3';
+import {LOCAL_ASR_MODEL,LOCAL_ASR_REVISION,LOCAL_ASR_RUNTIME,LOCAL_ASR_WASM_PATH} from './local-transcriber.mjs?v=20261019-local5';
 
 const notify=(callback,value)=>{try{callback?.(value);}catch{}};
 const error=(message,code)=>Object.assign(new Error(message),{code});

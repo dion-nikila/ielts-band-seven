@@ -1,0 +1,12 @@
+// Limited pattern checks, not a complete grammar checker or a band estimator.
+const rules=[
+ {id:'information',pattern:/\binformations\b/gi,replacement:'information',why:'Information is normally uncountable in academic English.',exercise:'Correct every occurrence, then write two new sentences using information without a plural ending.',check:'Each new sentence uses information as an uncountable noun.'},
+ {id:'advice',pattern:/\badvices\b/gi,replacement:'advice',why:'Advice is normally uncountable. Use pieces of advice when a count is needed.',exercise:'Rewrite this phrase, then write one sentence with advice and one with a piece of advice.',check:'Both sentences use a countable structure only with piece or pieces.'},
+ {id:'plural_agreement',pattern:/\b(universities|students|people|governments|employees|companies|businesses|schools|children|teachers|workers)\s+(has|is)\b/gi,replacement:match=>match.replace(/\bhas$/i,'have').replace(/\bis$/i,'are'),why:'This plural subject normally takes have or are, rather than has or is.',exercise:'Correct the quoted subject–verb pair, then write two fresh sentences with different plural subjects.',check:'The revision and both new sentences pair a plural subject with have or are.'},
+ {id:'modal_base',pattern:/\b(should|must|can|could|will|would)\s+(invests|improves|provides|helps|increases|reduces)\b/gi,replacement:match=>match.slice(0,-1),why:'A modal verb is followed by the base form, without the third-person -s ending.',exercise:'Correct the quoted phrase, then write three recommendations beginning with should, can and must.',check:'Every recommendation uses the base verb immediately after the modal.'},
+];
+export function findLanguageChecks(value){
+ const text=String(value??'');const found=[];
+ for(const rule of rules){rule.pattern.lastIndex=0;for(const match of text.matchAll(rule.pattern)){if(rule.id==='plural_agreement'){const prefix=text.slice(0,match.index).split(/[.!?;:\n]|,\s*(?:and|but|while|although|because|whereas)\s+/i).at(-1).trim();if(!/^(?:(?:the|these|those|many|some|most|several|all|our|their|young|older|public|private)\s*)*$/i.test(prefix))continue;}let replacement=typeof rule.replacement==='function'?rule.replacement(match[0]):rule.replacement;if(/^[A-Z]/.test(match[0])&&typeof rule.replacement==='string')replacement=replacement[0].toUpperCase()+replacement.slice(1);found.push({id:rule.id,offset:match.index,original:match[0],replacement,why:rule.why,exercise:rule.exercise,successCheck:rule.check});}}
+ return found.sort((a,b)=>a.offset-b.offset);
+}
