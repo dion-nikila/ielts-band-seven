@@ -1,5 +1,5 @@
-import {dateKey,daysBetween,freshMocks,wordCount} from './core.mjs?v=20261020-practice';
-import {ensureLearning,lessonRecord,nextLesson,firstAttemptSummary} from './coach.mjs?v=20261020-practice';
+import {dateKey,daysBetween,freshMocks,wordCount} from './core.mjs?v=20261020-validation';
+import {ensureLearning,lessonRecord,nextLesson,firstAttemptSummary} from './coach.mjs?v=20261020-validation';
 export function createLearningUI(c){
  const {esc,head,button,link,lessons}=c;
  const path=()=>['reading-tfng','listening-distractors','writing-task1-overview','speaking-part1','writing-task2-plan','reading-headings','listening-completion','writing-paragraph-development','speaking-part2','speaking-part3'].map(id=>lessons.find(l=>l.id===id)).filter(Boolean);

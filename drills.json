@@ -115,7 +115,9 @@
         "explanation": "The final paragraph recommends repeated shade measurements because a photograph taken at a different time of day could mislead.",
         "tag": "cause and effect"
       }
-    ]
+    ],
+    "contentVersion": "20261020-reviewed-1",
+    "alignment": "focused skill practice"
   },
   {
     "id": "reading-remote-work",
@@ -233,7 +235,9 @@
         "explanation": "The final paragraph says experienced staff made up most of the trial group, so newcomers might need a different amount of informal help.",
         "tag": "reason"
       }
-    ]
+    ],
+    "contentVersion": "20261020-reviewed-1",
+    "alignment": "focused skill practice"
   },
   {
     "id": "reading-citizen-science",
@@ -351,7 +355,9 @@
         "explanation": "The final paragraph recommends broad participation plus targeted specialist follow-up with a consistent method.",
         "tag": "main recommendation"
       }
-    ]
+    ],
+    "contentVersion": "20261020-reviewed-1",
+    "alignment": "focused skill practice"
   },
   {
     "id": "language-repair",
@@ -501,6 +507,8 @@
         "explanation": "Whose expresses the relationship between the city and its population. It can refer to places or things as well as people. Do not add its after whose.",
         "tag": "relative clauses"
       }
-    ]
+    ],
+    "contentVersion": "20261020-reviewed-1",
+    "alignment": "language exercise"
   }
 ]

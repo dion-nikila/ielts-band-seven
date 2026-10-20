@@ -1,10 +1,11 @@
-import {wordCount,dateKey} from './core.mjs?v=20261020-practice';
-import {findLanguageChecks} from './language-checks.mjs?v=20261020-practice';
+import {markAnswer} from './marking.mjs?v=20261020-validation';
+import {wordCount,dateKey} from './core.mjs?v=20261020-validation';
+import {findLanguageChecks} from './language-checks.mjs?v=20261020-validation';
 export function ensureLearning(state){if(!state.learning)state.learning={lessons:{},current:null,speaking:[],practice:null};if(state.learning.practice===undefined)state.learning.practice=null;return state.learning;}
 export function lessonRecord(state,id){const l=ensureLearning(state);if(!l.lessons[id])l.lessons[id]={step:0,selected:null,submitted:false,correct:false,completedAt:null};return l.lessons[id];}
-export function normaliseAnswer(value){return String(value??'').normalize('NFKC').trim().toLowerCase().replace(/[’‘]/g,"'").replace(/[.,!?;]+$/g,'').replace(/\s+/g,' ');}
-export function answerCorrect(question,value){return [question.answer,...(question.accepted||[])].some(a=>normaliseAnswer(a)===normaliseAnswer(value));}
-export function markDrill(drill,answers){const results=drill.questions.map((q,i)=>({question:q.id,correct:answerCorrect(q,answers[i]),tag:q.tag}));const tags={};results.forEach(r=>{if(!r.correct)tags[r.tag]=(tags[r.tag]||0)+1;});return {correct:results.filter(r=>r.correct).length,total:results.length,results,focus:Object.entries(tags).sort((a,b)=>b[1]-a[1])};}
+export {normaliseAnswer} from './marking.mjs?v=20261020-validation';
+export function answerCorrect(question,value){return markAnswer(question,value).correct;}
+export function markDrill(drill,answers){const results=drill.questions.map((q,i)=>({question:q.id,...markAnswer(q,answers[i]),tag:q.tag}));const tags={};results.forEach(r=>{if(!r.correct)tags[r.tag]=(tags[r.tag]||0)+1;});return {correct:results.filter(r=>r.correct).length,total:results.length,results,focus:Object.entries(tags).sort((a,b)=>b[1]-a[1])};}
 export function nextLesson(lessons,state){const l=ensureLearning(state);if(l.current){const active=lessons.find(x=>x.id===l.current);if(active&&!l.lessons[active.id]?.completedAt)return active;}return lessons.find(x=>!l.lessons[x.id]?.completedAt)||null;}
 export function firstAttemptSummary(attempts,drills,skill){const ids=new Set(drills.filter(d=>d.skill===skill).map(d=>d.id));const seen=new Set();const first=attempts.filter(a=>{if(!ids.has(a.drillId)||seen.has(a.drillId))return false;seen.add(a.drillId);return true;});const correct=first.reduce((n,a)=>n+a.correct,0),total=first.reduce((n,a)=>n+a.total,0);return {sets:first.length,correct,total,percent:total?Math.round(correct/total*100):null};}
 export function writingReview(text,type){const words=wordCount(text),paragraphs=text.trim()?text.trim().split(/\n\s*\n/).filter(Boolean).length:0,minimum=type===1?150:250;const findings=[];

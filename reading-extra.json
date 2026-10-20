@@ -10,7 +10,7 @@
       {
         "id": "energy-1",
         "type": "mcq",
-        "question": "Matching headings: which heading best expresses the main idea of paragraph B?",
+        "question": "Main idea: which heading best expresses the main idea of paragraph B?",
         "options": [
           "Choosing storage according to the service it must provide",
           "Comparing the two installations' daily electricity losses",
@@ -84,7 +84,12 @@
           "peak demand"
         ],
         "explanation": "The first sentence of paragraph C gives 'peak demand'. 'Electricity use' would describe a different measure and would contradict the next sentence.",
-        "tag": "sentence completion"
+        "tag": "sentence completion",
+        "rule": {
+          "kind": "words",
+          "maxWords": 2,
+          "maxNumbers": 0
+        }
       },
       {
         "id": "energy-7",
@@ -110,9 +115,16 @@
           "unmet demand"
         ],
         "explanation": "Paragraph E proposes recording 'unmet demand during simulated interruptions'. Bills and consumption remain additional measures, not the requested interruption measure.",
-        "tag": "locating detail"
+        "tag": "locating detail",
+        "rule": {
+          "kind": "words",
+          "maxWords": 2,
+          "maxNumbers": 0
+        }
       }
-    ]
+    ],
+    "contentVersion": "20261020-reviewed-1",
+    "alignment": "focused skill practice"
   },
   {
     "id": "reading-library-change",
@@ -142,10 +154,16 @@
         "options": [],
         "answer": "quiet seats",
         "accepted": [
-          "quiet seats"
+          "quiet seats",
+          "seats"
         ],
-        "explanation": "Paragraph B states that twelve 'quiet seats' were removed. The question requests words from the passage, so a synonym such as 'silent chairs' is not an acceptable extraction.",
-        "tag": "sentence completion"
+        "explanation": "Paragraph B states that twelve 'quiet seats' were removed. The question requests words from the passage, so a synonym such as 'silent chairs' is not an acceptable extraction. The shorter entry 'seats' also fits this gap, stays within the limit and preserves the stated fact.",
+        "tag": "sentence completion",
+        "rule": {
+          "kind": "words",
+          "maxWords": 2,
+          "maxNumbers": 0
+        }
       },
       {
         "id": "library-3",
@@ -163,7 +181,7 @@
       {
         "id": "library-4",
         "type": "mcq",
-        "question": "Matching headings: which heading best fits paragraph C?",
+        "question": "Main idea: which heading best fits paragraph C?",
         "options": [
           "Combining sources to understand overlapping uses",
           "Measuring the relative popularity of printed and electronic reading",
@@ -228,7 +246,9 @@
         "explanation": "Paragraph E says staff could not determine how many collections replaced visits and how many were additional. The increase alone cannot establish any of the other causal or majority claims.",
         "tag": "limits of evidence"
       }
-    ]
+    ],
+    "contentVersion": "20261020-reviewed-1",
+    "alignment": "focused skill practice"
   },
   {
     "id": "reading-memory-retrieval",
@@ -271,15 +291,21 @@
         "options": [],
         "answer": "first attempt",
         "accepted": [
-          "first attempt"
+          "first attempt",
+          "attempt"
         ],
-        "explanation": "Paragraph C explicitly distinguishes the 'first attempt' from the corrected version. A corrected answer is not evidence of independent recall on the first attempt.",
-        "tag": "sentence completion"
+        "explanation": "Paragraph C explicitly distinguishes the 'first attempt' from the corrected version. A corrected answer is not evidence of independent recall on the first attempt. The shorter entry 'attempt' also fits this gap, stays within the limit and preserves the stated fact.",
+        "tag": "sentence completion",
+        "rule": {
+          "kind": "words",
+          "maxWords": 2,
+          "maxNumbers": 0
+        }
       },
       {
         "id": "memory-4",
         "type": "mcq",
-        "question": "Matching headings: which heading best expresses the main idea of paragraph D?",
+        "question": "Main idea: which heading best expresses the main idea of paragraph D?",
         "options": [
           "An effective combination whose individual contributions remain uncertain",
           "Interview evidence establishing why recall alone improved delayed scores",
@@ -324,10 +350,16 @@
         "options": [],
         "answer": "study time",
         "accepted": [
-          "study time"
+          "study time",
+          "time"
         ],
-        "explanation": "Paragraph E says 'study time had been equal between groups'. It rules out longer practice as a simple explanation; it does not isolate the components of the combined method.",
-        "tag": "controlling a variable"
+        "explanation": "Paragraph E says 'study time had been equal between groups'. It rules out longer practice as a simple explanation; it does not isolate the components of the combined method. The shorter entry 'time' also fits this gap, stays within the limit and preserves the stated fact.",
+        "tag": "controlling a variable",
+        "rule": {
+          "kind": "words",
+          "maxWords": 2,
+          "maxNumbers": 0
+        }
       },
       {
         "id": "memory-8",
@@ -343,6 +375,8 @@
         "explanation": "Paragraph E excludes extended presentations from the tasks studied and several-month retention from the follow-up. The other three statements are supported in paragraphs B or D.",
         "tag": "scope of a conclusion"
       }
-    ]
+    ],
+    "contentVersion": "20261020-reviewed-1",
+    "alignment": "focused skill practice"
   }
 ]

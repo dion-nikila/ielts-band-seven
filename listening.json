@@ -31,12 +31,17 @@
           "thursday"
         ],
         "explanation": "Thursday is the confirmed day. Tuesday is the original information and is explicitly corrected.",
-        "tag": "corrected information"
+        "tag": "corrected information",
+        "rule": {
+          "kind": "words",
+          "maxWords": 1,
+          "maxNumbers": 0
+        }
       },
       {
         "id": "booking-3",
         "type": "text",
-        "question": "Arrival time for collecting equipment: _____. Write A NUMBER.",
+        "question": "Arrival time for collecting equipment: _____. Write NO MORE THAN TWO WORDS AND/OR A NUMBER.",
         "options": [],
         "answer": "9:45",
         "accepted": [
@@ -49,11 +54,15 @@
           "9.45am",
           "09:45 am",
           "9:45 a.m.",
-          "nine forty-five",
-          "nine forty five"
+          "nine forty-five"
         ],
         "explanation": "Arrive at 9:45 to collect equipment. Ten is the activity start time, not the arrival time.",
-        "tag": "distinguishing related times"
+        "tag": "distinguishing related times",
+        "rule": {
+          "kind": "mixed",
+          "maxWords": 2,
+          "maxNumbers": 1
+        }
       },
       {
         "id": "booking-4",
@@ -78,7 +87,12 @@
           "morgan"
         ],
         "explanation": "The surname is given and then spelled M, O, R, G, A, N.",
-        "tag": "spelling a name"
+        "tag": "spelling a name",
+        "rule": {
+          "kind": "words",
+          "maxWords": 1,
+          "maxNumbers": 0
+        }
       },
       {
         "id": "booking-6",
@@ -92,7 +106,12 @@
           "thirty eight"
         ],
         "explanation": "The adult course costs 38 pounds. The 32-pound price is for students.",
-        "tag": "selecting the relevant price"
+        "tag": "selecting the relevant price",
+        "rule": {
+          "kind": "number",
+          "maxWords": 0,
+          "maxNumbers": 1
+        }
       },
       {
         "id": "booking-7",
@@ -120,7 +139,9 @@
         "explanation": "Unsafe river conditions lead to an indoor safety workshop. Ordinary rain alone does not stop the activity, and moving to another week is explicitly rejected.",
         "tag": "conditions and alternatives"
       }
-    ]
+    ],
+    "contentVersion": "20261020-reviewed-1",
+    "alignment": "focused skill practice"
   },
   {
     "id": "listening-campus",
@@ -143,7 +164,12 @@
           "two one four"
         ],
         "explanation": "Room 207 appears in the old email, but the larger group will use room 214 instead.",
-        "tag": "corrected room number"
+        "tag": "corrected room number",
+        "rule": {
+          "kind": "number",
+          "maxWords": 0,
+          "maxNumbers": 1
+        }
       },
       {
         "id": "campus-2",
@@ -168,7 +194,12 @@
           "six"
         ],
         "explanation": "New students can borrow up to 6 books at a time. A later increase does not change the current limit.",
-        "tag": "current versus future limits"
+        "tag": "current versus future limits",
+        "rule": {
+          "kind": "number",
+          "maxWords": 0,
+          "maxNumbers": 1
+        }
       },
       {
         "id": "campus-4",
@@ -181,7 +212,12 @@
           "ten"
         ],
         "explanation": "The student card provides 10 pounds of printing credit; additional credit has to be purchased.",
-        "tag": "listening for quantities"
+        "tag": "listening for quantities",
+        "rule": {
+          "kind": "number",
+          "maxWords": 0,
+          "maxNumbers": 1
+        }
       },
       {
         "id": "campus-5",
@@ -199,7 +235,7 @@
       {
         "id": "campus-6",
         "type": "text",
-        "question": "To visit careers advisers without an appointment this week, arrive before _____ a.m. Write A NUMBER.",
+        "question": "To visit careers advisers without an appointment this week, arrive before _____ a.m. Write NO MORE THAN TWO WORDS AND/OR A NUMBER.",
         "options": [],
         "answer": "11",
         "accepted": [
@@ -208,7 +244,12 @@
           "eleven"
         ],
         "explanation": "Visitors without appointments must arrive before 11 in the morning. After that, the advisers have interviews.",
-        "tag": "time limits"
+        "tag": "time limits",
+        "rule": {
+          "kind": "mixed",
+          "maxWords": 2,
+          "maxNumbers": 1
+        }
       },
       {
         "id": "campus-7",
@@ -236,7 +277,9 @@
         "explanation": "Students should book an online appointment with computer support. Reception will not provide technical help, and the induction is not offered as a solution to this problem.",
         "tag": "recommended action"
       }
-    ]
+    ],
+    "contentVersion": "20261020-reviewed-1",
+    "alignment": "focused skill practice"
   },
   {
     "id": "listening-project",
@@ -271,7 +314,12 @@
           "twenty four"
         ],
         "explanation": "Thirty was the original hope. The current target is 24 because recruiting thirty would take too long.",
-        "tag": "corrected quantity"
+        "tag": "corrected quantity",
+        "rule": {
+          "kind": "number",
+          "maxWords": 0,
+          "maxNumbers": 1
+        }
       },
       {
         "id": "project-3",
@@ -296,7 +344,12 @@
           "fifteen"
         ],
         "explanation": "The final plan is about 15 minutes. Half an hour was the original idea and was rejected because of volunteers' time.",
-        "tag": "revised duration"
+        "tag": "revised duration",
+        "rule": {
+          "kind": "number",
+          "maxWords": 0,
+          "maxNumbers": 1
+        }
       },
       {
         "id": "project-5",
@@ -321,7 +374,12 @@
           "friday"
         ],
         "explanation": "The revisions are due by Friday. Saturday is the pilot interview date, a separate event.",
-        "tag": "matching dates to events"
+        "tag": "matching dates to events",
+        "rule": {
+          "kind": "words",
+          "maxWords": 1,
+          "maxNumbers": 0
+        }
       },
       {
         "id": "project-7",
@@ -346,8 +404,15 @@
           "six hundred"
         ],
         "explanation": "Each pair's summary has a maximum of 600 words. The sources list is excluded from that limit.",
-        "tag": "word limits and exclusions"
+        "tag": "word limits and exclusions",
+        "rule": {
+          "kind": "number",
+          "maxWords": 0,
+          "maxNumbers": 1
+        }
       }
-    ]
+    ],
+    "contentVersion": "20261020-reviewed-1",
+    "alignment": "focused skill practice"
   }
 ]

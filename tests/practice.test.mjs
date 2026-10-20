@@ -13,7 +13,7 @@ test('expanded bank contains 204 new distinct questions across 16 sets',()=>{
 });
 test('Reading simulations match 3 passages, 40 items and substantial Academic reading length',()=>{
  const full=bank.filter(d=>d.format==='full');assert.equal(full.length,2);
- for(const d of full){assert.equal(d.minutes,60);assert.equal(d.questions.length,40);assert.equal(d.parts.length,3);const words=d.parts.reduce((n,p)=>n+p.passage.split(/\s+/).length,0);assert.ok(words>=2000&&words<=2750,`${d.id}: ${words} words`);assert.deepEqual(d.parts.map((_,i)=>d.questions.filter(q=>q.part===i).length),[13,13,14]);assert.ok(d.questions.every(q=>q.part>=0&&q.part<3));}
+ for(const d of full){assert.equal(d.minutes,60);assert.equal(d.questions.length,40);assert.equal(d.parts.length,3);const words=d.parts.reduce((n,p)=>n+p.passage.split(/\s+/).length,0);assert.ok(words>=2150&&words<=2750,`${d.id}: ${words} words`);assert.deepEqual(d.parts.map((_,i)=>d.questions.filter(q=>q.part===i).length),[13,13,14]);assert.ok(d.questions.every(q=>q.part>=0&&q.part<3));}
 });
 test('every answer key marks perfectly while empty answers never receive marks',()=>{
  for(const d of bank){assert.equal(markDrill(d,d.questions.map(q=>q.answer)).correct,d.questions.length);assert.equal(markDrill(d,[]).correct,0);for(const q of d.questions){assert.ok(q.explanation.length>=40,`${q.id}: useful explanation required`);if(q.type!=='text')assert.equal(q.options.filter(o=>o===q.answer).length,1);}}

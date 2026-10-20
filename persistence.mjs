@@ -1,7 +1,7 @@
-import {safePracticeDrafts} from './practice.mjs?v=20261020-practice';
-import {emptyState,validateState} from './core.mjs?v=20261020-practice';
-import {safeLearning} from './coach.mjs?v=20261020-practice';
-import {safeAssessments} from './grading.mjs?v=20261020-practice';
+import {safePracticeDrafts} from './practice.mjs?v=20261020-validation';
+import {emptyState,validateState} from './core.mjs?v=20261020-validation';
+import {safeLearning} from './coach.mjs?v=20261020-validation';
+import {safeAssessments} from './grading.mjs?v=20261020-validation';
 
 const object=value=>!!value&&typeof value==='object'&&!Array.isArray(value);
 const safeAnswer=(key,value)=>/^p[123]-\d{1,3}$/.test(key)&&object(value)&&['speaking_points','speaking_transcript'].includes(value.mode)&&typeof value.text==='string'&&value.text.length<=20000;
