@@ -1,7 +1,7 @@
-import {findLanguageChecks} from './language-checks.mjs?v=20261019-final';
-import {wordCount} from './core.mjs?v=20261019-final';
-import {bandNineTarget,bandNineSkills,bandNineSessions,bandNineReviewLoop,bandNineSources} from './band-nine.mjs?v=20261019-final';
-import {renderAssessment} from './grading-ui.mjs?v=20261019-final';
+import {findLanguageChecks} from './language-checks.mjs?v=20261020-practice';
+import {wordCount} from './core.mjs?v=20261020-practice';
+import {bandNineTarget,bandNineSkills,bandNineSessions,bandNineReviewLoop,bandNineSources} from './band-nine.mjs?v=20261020-practice';
+import {renderAssessment} from './grading-ui.mjs?v=20261020-practice';
 
 export function renderRevisionComparison(list,esc){
  if(list.length<2)return '';

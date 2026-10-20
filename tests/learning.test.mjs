@@ -9,11 +9,11 @@ import {lessons} from '../lessons.mjs';
 import {prompts, cues} from '../content.mjs';
 
 const readJSON = name => readFile(new URL(`../${name}`, import.meta.url), 'utf8').then(JSON.parse);
-const [reading, extraReading, listening, videos] = await Promise.all([
+const [reading, extraReading, listening, videos, bank] = await Promise.all([
   readJSON('drills.json'), readJSON('reading-extra.json'),
-  readJSON('listening.json'), readJSON('videos.json')
+  readJSON('listening.json'), readJSON('videos.json'), readJSON('practice-bank.json')
 ]);
-const drills = [...reading, ...extraReading, ...listening];
+const drills = [...reading, ...extraReading, ...listening, ...bank];
 const validLearning = () => ({
   current: 'reading-tfng',
   lessons: {

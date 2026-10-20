@@ -1,7 +1,7 @@
-import { createSubmission, validateAssessment } from './grading.mjs?v=20261019-final';
-import { criteriaFor } from './grader-contract.mjs?v=20261019-final';
-import {findLanguageChecks} from './language-checks.mjs?v=20261019-final';
-import { normalizeAssessment } from './report-normalizer.mjs?v=20261019-final';
+import { createSubmission, validateAssessment } from './grading.mjs?v=20261020-practice';
+import { criteriaFor } from './grader-contract.mjs?v=20261020-practice';
+import {findLanguageChecks} from './language-checks.mjs?v=20261020-practice';
+import { normalizeAssessment } from './report-normalizer.mjs?v=20261020-practice';
 
 export const LOCAL_COACH_PROVIDER = 'On-device AI';
 export const LOCAL_COACH_DOWNLOAD_BYTES = 968001536;
@@ -62,7 +62,7 @@ export function localAssessmentFromText(text,value,model){
 
 /** A worker isolates local computation. Cancellation terminates it and releases
  * the model; model files may remain in the browser cache for the next load. */
-export function createLocalCoach({ Worker: WorkerClass = globalThis.Worker, navigator: device = globalThis.navigator, workerUrl = new URL('./local-coach-worker.mjs?v=20261019-final', import.meta.url), loadTimeoutMs = 900000, gradeTimeoutMs = 180000 } = {}) {
+export function createLocalCoach({ Worker: WorkerClass = globalThis.Worker, navigator: device = globalThis.navigator, workerUrl = new URL('./local-coach-worker.mjs?v=20261020-practice', import.meta.url), loadTimeoutMs = 900000, gradeTimeoutMs = 180000 } = {}) {
   let worker = null, sequence = 0, loadPromise = null;
   let status = { phase: typeof WorkerClass !== 'function' || !device?.gpu ? 'unsupported' : 'idle', model: null, progress: 0, error: null, downloadBytes: LOCAL_COACH_DOWNLOAD_BYTES };
   const pending = new Map(), listeners = new Set();

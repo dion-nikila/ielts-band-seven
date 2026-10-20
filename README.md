@@ -5,7 +5,8 @@ A free IELTS Academic study app on [GitHub Pages](https://dion-nikila.github.io/
 ## Practice and feedback
 
 - Ten guided lessons, worked examples and matching YouTube videos.
-- Six Reading sets, three Listening sets with playable audio, and a language repair set: 82 original practice questions.
+- Sixteen Reading sets (including two 40-question, 60-minute simulations), nine Listening sets with playable audio, and a language repair set: 286 distinct original practice questions.
+- A dedicated practice bank with skill filters, unopened-only filtering, saved unfinished attempts, passage navigation, answer explanations and reopening previous reviews.
 - Writing drafts, quick pattern checks, optional local AI coaching, quoted corrections and revision comparisons.
 - Speaking recording and playback, optional local transcription, then coaching on a checked transcript or talking points.
 - Band 9 goals in every skill, advanced practice blocks, mistake review and fresh full-mock tracking.
@@ -30,7 +31,7 @@ Record up to two minutes or choose an audio file. **Make a transcript on this de
 
 Drafts, notes, progress and feedback stay in this browser on this device. They do not automatically sync. Existing v1 backups and valid earlier AI reports remain compatible. Earlier provider estimates retain their original labels; they are not relabelled as local results. Export a backup regularly. Clearing browser data can erase both work and model caches. Audio stays only in the current tab and must be downloaded separately.
 
-Measure bands using fresh full tests, their answer keys and qualified assessment. Mini drills show item accuracy; repeated answers and AI report variation do not establish progress or a band. Listening clips use computer-generated voices reading original scripts, alongside links to official recordings. The app has not been independently validated as an IELTS intervention.
+Measure bands using fresh full tests, their answer keys and qualified assessment. Original simulations and mini drills show item accuracy; repeated answers and AI report variation do not establish progress or a band. Listening clips use computer-generated voices reading original scripts, alongside links to official recordings. The app has not been independently validated as an IELTS intervention.
 
 ## Development
 

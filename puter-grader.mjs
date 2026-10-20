@@ -1,5 +1,5 @@
-import {createSubmission,validateAssessment} from './grading.mjs?v=20261019-final';
-import {criteriaFor,outputSchema,gradingInstructions,RUBRIC_VERSION} from './grader-contract.mjs?v=20261019-final';
+import {createSubmission,validateAssessment} from './grading.mjs?v=20261020-practice';
+import {criteriaFor,outputSchema,gradingInstructions,RUBRIC_VERSION} from './grader-contract.mjs?v=20261020-practice';
 
 export const PUTER_GRADING_MODEL='gpt-4.1';
 export const PUTER_TRANSCRIPTION_MODEL='gpt-transcribe';

@@ -1,6 +1,7 @@
-import {emptyState,validateState} from './core.mjs?v=20261019-final';
-import {safeLearning} from './coach.mjs?v=20261019-final';
-import {safeAssessments} from './grading.mjs?v=20261019-final';
+import {safePracticeDrafts} from './practice.mjs?v=20261020-practice';
+import {emptyState,validateState} from './core.mjs?v=20261020-practice';
+import {safeLearning} from './coach.mjs?v=20261020-practice';
+import {safeAssessments} from './grading.mjs?v=20261020-practice';
 
 const object=value=>!!value&&typeof value==='object'&&!Array.isArray(value);
 const safeAnswer=(key,value)=>/^p[123]-\d{1,3}$/.test(key)&&object(value)&&['speaking_points','speaking_transcript'].includes(value.mode)&&typeof value.text==='string'&&value.text.length<=20000;
@@ -23,7 +24,7 @@ export function recoverSavedState(raw){
   const {assessments,learning,speakingAnswers,...core}=state;
   validateState(core);
  }catch{return blocked();}
- const warnings=[];
+ const warnings=[];if(!safePracticeDrafts(state.practiceDrafts)){delete state.practiceDrafts;warnings.push('Unfinished practice could not be restored. Your submitted results and other saved work were retained.');}
  if(state.assessments!==undefined){
   const original=state.assessments;
   if(!Array.isArray(original)){
